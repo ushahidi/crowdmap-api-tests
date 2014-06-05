@@ -1,0 +1,28 @@
+<?php
+$I = new PostGuy($scenario);
+$I->wantTo('test the API call for maps associated with a post');
+$I->haveHttpHeader('Content-Type', 'text/html');
+$I->haveHttpHeader('User-Agent', 'Api Test/0.1');
+$I->sendGet('/posts/11608/maps/');
+$I->seeResponseContainsJson(array('approved'=>true));
+$I->seeResponseContainsJson(array('map_id'=>1810));
+$I->seeResponseContainsJson(array('user_id'=>2990));
+$I->seeResponseContainsJson(array('crowdmap_id'=>"db319cfda69c3fc879e636742878e026d0e0adfc88198b564075102f1adca023e58aa290c332c6b75180b38f2725f16b76d31416fc2679b8a78c2dcd1d5b2cc6"));
+$I->seeResponseContainsJson(array('crowdmap_id_h'=>"f165c5d0c95a55f8e65129a685cf36cc"));
+$I->seeResponseContainsJson(array('username'=>"alice"));
+$I->seeResponseContainsJson(array('name'=>"Violência Sexual no Brasil"));
+$I->seeResponseContainsJson(array('description'=>"Esse é um mapa colaborativo. Tod@s e qualquer um pode colocar seu ponto no mapa, leva alguns minutos. Tem como objetivo tornar visível o invisível: a Cultura do ESTUPRO no Brasil.  Para ver o mapa abaixo desse texto, clique em \"view map\". Para registros coloque \"Criar Post\". Após escrever seu registro, marque abaixo com o balãozinho, ache o local no mapa e clique \"criar uma localidade\". Então, publique. O texto fica anônimo. Vamos mapear registros, notícias e relatos de pessoas que tenham sofrido violência sexual no Brasil. Pedimos que enviem apenas relatos verídicos. Essa é uma iniciativa autônoma e visa tão somente a ilustração da grave situação de abusos sexuais no pais. Pode-se contribuir de duas maneiras: simplismente colocando um ponto no mapa ou tornando-se colaborador do mapa, ao criar loggin no site, ajudando a alimentar o banco de dados. Que sirva para a reflexão e quem sabe, a ação."));
+$I->seeResponseContainsJson(array('plus'=>false));
+$I->seeResponseContainsJson(array('baselayer'=>"crowdmap_satellite"));
+$I->seeResponseContainsJson(array('instagram_auto_post'=>false));
+$I->seeResponseContainsJson(array('twitter_auto_post'=>false));
+$I->seeResponseContainsJson(array('twitter_auto_post_retweets'=>false));
+$I->seeResponseContainsJson(array('date_registered'=>1374502917));
+$I->seeResponseContainsJson(array('banned'=>false));
+$I->seeResponseContainsJson(array('sms_number'=>false));
+$I->seeResponseContainsJson(array('sms_confirmed'=>false));
+$I->seeResponseContainsJson(array('avatar'=>"https://b25c7ada827abcbc0630-5454a9e6f7100566866dd221e5013c79.ssl.cf2.rackcdn.com/51f10f700c8a74.71259785_c.jpg"));
+$I->seeResponseContainsJson(array('moderation'=>"auto"));
+$I->seeResponseContainsJson(array('date_created'=>1374502995));
+$I->seeResponseContainsJson(array('post_count'=>19));
+$I->dontSeeResponseContains('"post_id":');

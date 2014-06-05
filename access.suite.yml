@@ -1,0 +1,4 @@
+class_name: AccessGuy
+modules:
+    enabled: [Db, PhpBrowser, REST, AccessHelper, LoginHelper, AuthHelper]
+    
