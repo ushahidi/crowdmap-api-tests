@@ -5,7 +5,7 @@ $I->haveHttpHeader('Content-Type', 'text/html');
 $I->haveHttpHeader('User-Agent', 'Api Test/0.1');
 
 $I->logInByUsername(GOOD_USERNAME,GOOD_PASSWORD,$I->api_key_for_crowdmap(LOGIN_URL,'POST'));
-$I->seeResponseCodeIs(200);	
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
 $session = $I->getSession();
 
