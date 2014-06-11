@@ -64,10 +64,26 @@ $I->seeResponseContainsJson(array('posts' => array()));
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 
+// test count with a bad username
+$I->sendGet('/users/returnofthejedi/posts', array('count' => TRUE, 'apikey'=> (string) $I->api_key_for_crowdmap('/users/returnofthejedi/posts', 'GET'));
+$I->seeResponseCodeIs(200);
+$I->seeResponseIsJson();
+$I->seeResponseContainsJson(array('count' => 0));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+
 // test bad user_id
 $I->sendGet('/users/100000/posts', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/100000/posts', 'GET'));
 $I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('posts' => array()));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+
+// test count with a bad user_id
+$I->sendGet('/users/100000/posts', array('count' => TRUE, 'apikey'=> (string) $I->api_key_for_crowdmap('/users/100000/posts', 'GET'));
+$I->seeResponseCodeIs(200);
+$I->seeResponseIsJson();
+$I->seeResponseContainsJson(array('count' => 0));
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
