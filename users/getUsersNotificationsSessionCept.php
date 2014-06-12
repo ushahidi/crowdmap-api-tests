@@ -16,7 +16,7 @@ $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 $resp = $I->grabResponse();
-$I->checkNotificationObjs($resp, array(3357151));
+$I->checkUserObjs($resp, array(3357151));
 
 /* testing count request with user_id */
 $I->sendGet('/users/7117/notifications', array('count' => TRUE, 'apikey'=> (string) $I->api_key_for_crowdmap('/users/7117/notifications', 'GET'), 'session'=> (string) $session));
@@ -35,7 +35,7 @@ $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 $resp = $I->grabResponse();
-$I->checkNotificationObjs($resp, array(3357151));
+$I->checkUserObjs($resp, array(3357151));
 
 /* testing count request with crowdmapID */
 $I->sendGet('/users/e066db5d1109f0a704d5047caebd94c9994f7e467788a36bab37ec5e811acab85d5c582a592639b17d25712dbb7263f9bb8e6ffc6132e4673f663687a5dd2ccd/notifications',
@@ -54,7 +54,7 @@ $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 $resp = $I->grabResponse();
-$I->checkNotificationObjs($resp, array(3357151));
+$I->checkUserObjs($resp, array(3357151));
 
 /* testing count request with username */
 $I->sendGet('/users/zack/notifications', array('count' => TRUE, 'apikey'=> (string) $I->api_key_for_crowdmap('/users/zack/notifications', 'GET'), 'session'=> (string) $session));
