@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace Codeception\Module;
 
 /* Data fixtures for testing different models */
@@ -9,7 +9,7 @@ class fixtures extends \Codeception\Module
 	public static function mapSettingsArray()
 	{
 		$settings = array();
-		
+
 		$setting = &$settings[20];
 		$setting['maps_settings_id'] = 20;
 		$setting['map_id'] = 27;
@@ -21,161 +21,192 @@ class fixtures extends \Codeception\Module
 		$setting['map_id'] = 27;
 		$setting['setting'] = 'sponsorshipHTML';
 		$setting['value'] = '<a href="http://openrov.com"><img src="http://cl.ly/image/1X3A0L0u082G/Screen%20Shot%202014-03-06%20at%201.18.54%20PM.png" /></a><a href="http://ushahidi.com"><img src="http://cl.ly/image/0A1d091R1o0m/Screen%20Shot%202014-03-06%20at%201.16.56%20PM.png" /></a>';
-			
-		return $settings;	
+
+		return $settings;
 	}
-	
+
 	public static function tagsArray()
 	{
 		$tags = array();
-		
+
 		$tag = &$tags['dear leader'];
 		$tag['tag'] = 'dear leader';
 		$tag['users_count'] = 1;
 		$tag['maps_count'] = 1;
 		$tag['users'] = array(3);
 		$tag['maps'] = array(1);
-		
+
 		$tag = &$tags['instagram'];
 		$tag['tag'] = 'instagram';
 		$tag['users_count'] = 3;
 		$tag['maps_count'] = 3;
 		$tag['users'] = array(3,269,4904);
 		$tag['maps'] = array(1,450,3136);
-		
+
 		$tag = &$tags['kim jong un'];
 		$tag['tag'] = 'kim jong un';
 		$tag['users_count'] = 1;
 		$tag['maps_count'] = 1;
 		$tag['users'] = array(3);
 		$tag['maps'] = array(1);
-		
+
 		$tag = &$tags['korea'];
 		$tag['tag'] = 'korea';
 		$tag['users_count'] = 4;
 		$tag['maps_count'] = 5;
 		$tag['users'] = array(3,1291,2046,5712);
 		$tag['maps'] = array(1,95,817,1242,3606);
-		
+
 		$tag = &$tags['north korea'];
 		$tag['tag'] = 'north korea';
 		$tag['users_count'] = 1;
 		$tag['maps_count'] = 1;
 		$tag['users'] = array(3);
 		$tag['maps'] = array(1);
-		
+
 		$tag = &$tags['social media'];
 		$tag['tag'] = 'social media';
 		$tag['users_count'] = 2;
 		$tag['maps_count'] = 2;
 		$tag['users'] = array(3,3121);
 		$tag['maps'] = array(1,1904);
-		
+
 		$tag = &$tags['beans'];
 		$tag['tag'] = 'beans';
 		$tag['users_count'] = 1;
 		$tag['maps_count'] = 1;
 		$tag['users'] = array(5);
-		$tag['maps'] = array(2);		
-		
+		$tag['maps'] = array(2);
+
 		$tag = &$tags['cafe'];
 		$tag['tag'] = 'cafe';
 		$tag['users_count'] = 2;
 		$tag['maps_count'] = 2;
 		$tag['users'] = array(5,6116);
 		$tag['maps'] = array(2,3777);
-		
+
 		$tag = &$tags['coffee'];
 		$tag['tag'] = 'coffee';
 		$tag['users_count'] = 3;
 		$tag['maps_count'] = 3;
 		$tag['users'] = array(5,369,6887);
 		$tag['maps'] = array(2,213,4289);
-		
+
 		$tag = &$tags['global'];
 		$tag['tag'] = 'global';
 		$tag['users_count'] = 2;
 		$tag['maps_count'] = 2;
 		$tag['users'] = array(4,3184);
 		$tag['maps'] = array(7,1943);
-		
+
 		$tag = &$tags['travel'];
 		$tag['tag'] = 'travel';
 		$tag['users_count'] = 5;
 		$tag['maps_count'] = 5;
 		$tag['users'] = array(4,269,5282,6514,6870);
 		$tag['maps'] = array(7,450,3359,4057,4262);
-		
+
 		$tag = &$tags['crepes'];
 		$tag['tag'] = 'crepes';
 		$tag['users_count'] = 1;
 		$tag['maps_count'] = 1;
 		$tag['users'] = array(13);
 		$tag['maps'] = array(8);
-		
+
 		$tag = &$tags['pancake'];
 		$tag['tag'] = 'pancake';
 		$tag['users_count'] = 1;
 		$tag['maps_count'] = 1;
 		$tag['users'] = array(13);
 		$tag['maps'] = array(8);
-		
+
 		$tag = &$tags['pancakes'];
 		$tag['tag'] = 'pancakes';
 		$tag['users_count'] = 1;
 		$tag['maps_count'] = 1;
 		$tag['users'] = array(13);
 		$tag['maps'] = array(8);
-		
+
 		$tag = &$tags['burger'];
 		$tag['tag'] = 'burger';
 		$tag['users_count'] = 2;
 		$tag['maps_count'] = 2;
 		$tag['users'] = array(13,4210);
 		$tag['maps'] = array(9,2647);
-		
+
 		$tag = &$tags['burgers'];
 		$tag['tag'] = 'burgers';
 		$tag['users_count'] = 1;
 		$tag['maps_count'] = 1;
 		$tag['users'] = array(13);
 		$tag['maps'] = array(9);
-		
+
 		$tag = &$tags['austin'];
 		$tag['tag'] = 'austin';
 		$tag['users_count'] = 3;
 		$tag['maps_count'] = 4;
 		$tag['users'] = array(6,3391,4290);
 		$tag['maps'] = array(10,2036,2059,2690);
-		
+
 		$tag = &$tags['barbecue'];
 		$tag['tag'] = 'barbecue';
 		$tag['users_count'] = 1;
 		$tag['maps_count'] = 1;
 		$tag['users'] = array(6);
 		$tag['maps'] = array(10);
-		
+
 		$tag = &$tags['food'];
 		$tag['tag'] = 'food';
 		$tag['users_count'] = 11;
 		$tag['maps_count'] = 11;
 		$tag['users'] = array(6,306,650,3022,4147,4491,4638,4653,6150,7542,7473);
 		$tag['maps'] = array(10,173,363,1927,2600,2807,2905,2912,3799,4710,4857);
-		
+
 		$tag = &$tags['texas'];
 		$tag['tag'] = 'texas';
 		$tag['users_count'] = 2;
 		$tag['maps_count'] = 2;
 		$tag['users'] = array(6,4290);
 		$tag['maps'] = array(10,2690);
-		
+
 		return $tags;
+	}
+
+	public function postsTagsArray()
+	{
+		$posts_tags              = array();
+
+		$post_tag                = &$posts_tags['hashtag'];
+		$post_tag['tag']         = 'hashtag';
+		$post_tag['color']       = 'C9C9C9';
+		$post_tag['users_count'] = 1;
+		$post_tag['posts_count'] = 1;
+		$post_tag['users']       = array(3);
+		$post_tag['posts']       = array(77);
+
+		$post_tag                = &$posts_tags['cmupdates'];
+		$post_tag['tag']         = 'cmupdates';
+		$post_tag['color']       = 'C9C9C9';
+		$post_tag['users_count'] = 2;
+		$post_tag['posts_count'] = 12;
+		$post_tag['users']       = array(3,2);
+		$post_tag['posts']       = array(77,78,79,86,99,116,118,139,146,180,208,209);
+
+		$post_tag                = &$posts_tags['gaming'];
+		$post_tag['tag']         = 'gaming';
+		$post_tag['color']       = 'C9C9C9';
+		$post_tag['users_count'] = 1;
+		$post_tag['posts_count'] = 1;
+		$post_tag['users']       = array(2);
+		$post_tag['posts']       = array(143);
+
+		return $post_tags;
 	}
 
 	public static function locationsArray()
 	{
 		$locations = array();
-		
+
 		$location = &$locations[60070];
 		$location['location_id'] = 60070;
 		$location['fsq_venue_id'] = "";
@@ -184,7 +215,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = 45.569476651921;
 		$location['name'] = "Vieux Beloeil";
 		$location['region'] = "";
-		
+
 		$location = &$locations[7152];
 		$location['location_id'] = 7152;
 		$location['fsq_venue_id'] = "4e746e702271ffa4e6763c76";
@@ -193,7 +224,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = 51.294093064291;
 		$location['name'] = "Fetcham Mill Ponds";
 		$location['region'] = "";
-		
+
 		$location = &$locations[5692];
 		$location['location_id'] = 5692;
 		$location['fsq_venue_id'] = "";
@@ -202,7 +233,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = 30.048817634583;
 		$location['name'] = "Cairo, Egypt";
 		$location['region'] = "";
-		
+
 		$location = &$locations[5239];
 		$location['location_id'] = 5239;
 		$location['fsq_venue_id'] = "";
@@ -211,7 +242,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = -21.028109978643;
 		$location['name'] = "Chiredzi";
 		$location['region'] = "";
-		
+
 		$location = &$locations[5238];
 		$location['location_id'] = 5238;
 		$location['fsq_venue_id'] = "";
@@ -220,7 +251,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = -17.936928637549;
 		$location['name'] = "Zvimba West";
 		$location['region'] = "";
-		
+
 		$location = &$locations[5236];
 		$location['location_id'] = 5236;
 		$location['fsq_venue_id'] = "";
@@ -229,7 +260,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = -17.285086527937;
 		$location['name'] = "";
 		$location['region'] = "";
-		
+
 		$location = &$locations[5235];
 		$location['location_id'] = 5235;
 		$location['fsq_venue_id'] = "";
@@ -238,7 +269,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = -20.488068580627;
 		$location['name'] = "Zimbabwe";
 		$location['region'] = "";
-		
+
 		$location = &$locations[5234];
 		$location['location_id'] = 5234;
 		$location['fsq_venue_id'] = "";
@@ -247,7 +278,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = -8.0701073044391;
 		$location['name'] = "";
 		$location['region'] = "";
-		
+
 		$location = &$locations[5233];
 		$location['location_id'] = 5233;
 		$location['fsq_venue_id'] = "";
@@ -256,7 +287,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = 33.824356;
 		$location['name'] = "";
 		$location['region'] = "";
-		
+
 		$location = &$locations[5232];
 		$location['location_id'] = 5232;
 		$location['fsq_venue_id'] = "";
@@ -265,7 +296,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = 42.291183289635;
 		$location['name'] = "Pastoral CC estate";
 		$location['region'] = "";
-		
+
 		$location = &$locations[5231];
 		$location['location_id'] = 5231;
 		$location['fsq_venue_id'] = "4e28885245ddfe8f9df30182";
@@ -283,7 +314,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = 20.672018118007;
 		$location['name'] = "";
 		$location['region'] = "";
-		
+
 		$location = &$locations[5229];
 		$location['location_id'] = 5229;
 		$location['fsq_venue_id'] = "4ed41084be7b9eece43c0cb6";
@@ -292,7 +323,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = 40.759529300143;
 		$location['name'] = "NBC News";
 		$location['region'] = "";
-		
+
 		$location = &$locations[5228];
 		$location['location_id'] = 5228;
 		$location['fsq_venue_id'] = "";
@@ -301,7 +332,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = -17.831589698791;
 		$location['name'] = "Harare Zimbabwe";
 		$location['region'] = "";
-		
+
 		$location = &$locations[5227];
 		$location['location_id'] = 5227;
 		$location['fsq_venue_id'] = "";
@@ -310,7 +341,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = -20.514499482151;
 		$location['name'] = "Bulilima East";
 		$location['region'] = "";
-		
+
 		$location = &$locations[5226];
 		$location['location_id'] = 5226;
 		$location['fsq_venue_id'] = "4ff81c13e4b0f1c618e39fd8";
@@ -319,7 +350,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = -20.445484161377;
 		$location['name'] = "Mberengwa Turn Off";
 		$location['region'] = "";
-		
+
 		$location = &$locations[5225];
 		$location['location_id'] = 5225;
 		$location['fsq_venue_id'] = "";
@@ -328,7 +359,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = -20.154902458191;
 		$location['name'] = "Bulawayo, Zimbabwe";
 		$location['region'] = "";
-		
+
 		$location = &$locations[5224];
 		$location['location_id'] = 5224;
 		$location['fsq_venue_id'] = "4b0586e3f964a5208b7322e3";
@@ -337,7 +368,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = 45.431450386136;
 		$location['name'] = "Saint Brigid's";
 		$location['region'] = "";
-		
+
 		$location = &$locations[5220];
 		$location['location_id'] = 5220;
 		$location['fsq_venue_id'] = "";
@@ -346,7 +377,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = 38.958007212907;
 		$location['name'] = "14th and Massachusetts";
 		$location['region'] = "";
-		
+
 		$location = &$locations[5219];
 		$location['location_id'] = 5219;
 		$location['fsq_venue_id'] = "";
@@ -364,7 +395,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = 38.18703141439;
 		$location['name'] = "via santa marta";
 		$location['region'] = "";
-		
+
 		$location = &$locations[4515];
 		$location['location_id'] = 4515;
 		$location['fsq_venue_id'] = "";
@@ -373,7 +404,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = 38.194005967811;
 		$location['name'] = "Messina, SIC, Italia";
 		$location['region'] = "";
-		
+
 		$location = &$locations[60071];
 		$location['location_id'] = 60071;
 		$location['fsq_venue_id'] = "1";
@@ -382,7 +413,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = 37.446754547281;
 		$location['name'] = "Wells Fargo";
 		$location['region'] = "";
-		
+
 		$location = &$locations[60072];
 		$location['location_id'] = 60072;
 		$location['fsq_venue_id'] = "";
@@ -390,7 +421,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][0] = -122.419416;
 		$location['geometry']['coordinates'][1] = 37.774929;
 		$location['name'] = "37.774929, -122.419416";
-		$location['region'] = "";		
+		$location['region'] = "";
 
 		$location = &$locations[60073];
 		$location['location_id'] = 60073;
@@ -400,7 +431,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = -1.299041;
 		$location['name'] = "";
 		$location['region'] = "";
-		
+
 		$location = &$locations[60074];
 		$location['location_id'] = 60074;
 		$location['fsq_venue_id'] = "";
@@ -409,7 +440,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = 37.446754547281;
 		$location['name'] = "new test";
 		$location['region'] = "";
-		
+
 		$location = &$locations[5143];
 		$location['location_id'] = 5143;
 		$location['fsq_venue_id'] = "";
@@ -427,7 +458,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = 51.045325;
 		$location['name'] = "Calgary, Alberta, Canada";
 		$location['region'] = "";
-		
+
 		$location = &$locations[1665];
 		$location['location_id'] = 1665;
 		$location['fsq_venue_id'] = "";
@@ -436,7 +467,7 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = 41.790736790876;
 		$location['name'] = "";
 		$location['region'] = "";
-		
+
 		$location = &$locations[1630];
 		$location['location_id'] = 1630;
 		$location['fsq_venue_id'] = "";
@@ -445,14 +476,14 @@ class fixtures extends \Codeception\Module
 		$location['geometry']['coordinates'][1] = 41.289674024117;
 		$location['name'] = "";
 		$location['region'] = "";
-						
+
 		return $locations;
 	}
-	
+
 	public static function externalsArray()
 	{
 		$externals = array();
-		
+
 		$external = &$externals[7005];
 		$external['external_id'] = 7005;
 		$external['service_id'] = 5;
@@ -471,7 +502,7 @@ class fixtures extends \Codeception\Module
 		$external['images'][0]['external_id'] = 7005;
 		$external['images'][0]['url'] = "http://www.nytimes.com/images/2001/09/12/nyregion/dest.3.jpg";
 		$external['images'][0]['selected'] = false;
-		
+
 		$external = &$externals[5484];
 		$external['external_id'] = 5484;
 		$external['service_id'] = 5;
@@ -489,7 +520,7 @@ class fixtures extends \Codeception\Module
 		$external['images'][0]['externals_images_id'] = 868;
 		$external['images'][0]['external_id'] = 5484;
 		$external['images'][0]['url'] = "http://www.aljazeera.com/mritems/Images/2013/7/11/201371115037225734_20.jpg";
-		
+
 		$external = &$externals[5481];
 		$external['external_id'] = 5481;
 		$external['service_id'] = 5;
@@ -507,7 +538,7 @@ class fixtures extends \Codeception\Module
 		$external['images'][0]['externals_images_id'] = 863;
 		$external['images'][0]['external_id'] = 5481;
 		$external['images'][0]['url'] = "http://i.dailymail.co.uk/i/pix/2013/03/21/article-2297078-18D799C1000005DC-217_634x478.jpg";
-		
+
 		$external = &$externals[5478];
 		$external['external_id'] = 5478;
 		$external['service_id'] = 5;
@@ -524,8 +555,8 @@ class fixtures extends \Codeception\Module
 		$external['embed_html'] = null;
 		$external['images'][0]['externals_images_id'] = 858;
 		$external['images'][0]['external_id'] = 5478;
-		$external['images'][0]['url'] = "http://news.bbcimg.co.uk/media/images/65185000/jpg/_65185903_38_rizana_s_passport-1.jpg";	
-		
+		$external['images'][0]['url'] = "http://news.bbcimg.co.uk/media/images/65185000/jpg/_65185903_38_rizana_s_passport-1.jpg";
+
 		$external = &$externals[5477];
 		$external['external_id'] = 5477;
 		$external['service_id'] = 5;
@@ -543,7 +574,7 @@ class fixtures extends \Codeception\Module
 		$external['images'][0]['externals_images_id'] = 853;
 		$external['images'][0]['external_id'] = 5477;
 		$external['images'][0]['url'] = "http://www.cnn.com/video/world/2011/06/23/mcedwards.indonesia.beheading.cnn.640x480.jpg";
-		
+
 		$external = &$externals[5476];
 		$external['external_id'] = 5476;
 		$external['service_id'] = 5;
@@ -561,7 +592,7 @@ class fixtures extends \Codeception\Module
 		$external['images'][0]['externals_images_id'] = 848;
 		$external['images'][0]['external_id'] = 5476;
 		$external['images'][0]['url'] = "http://i.telegraph.co.uk/multimedia/archive/01927/Sapubi_1927898a.jpg";
-		
+
 		$external = &$externals[5474];
 		$external['external_id'] = 5474;
 		$external['service_id'] = 5;
@@ -577,7 +608,7 @@ class fixtures extends \Codeception\Module
 		$external['favicon_url'] = "http://www.hrw.org/sites/all/themes/hrw/favicon.ico";
 		$external['embed_html'] = null;
 		$external['images'] = array();
-		
+
 		$external = &$externals[5473];
 		$external['external_id'] = 5473;
 		$external['service_id'] = 5;
@@ -595,7 +626,7 @@ class fixtures extends \Codeception\Module
 		$external['images'][0]['externals_images_id'] = 844;
 		$external['images'][0]['external_id'] = 5473;
 		$external['images'][0]['url'] = "http://www.bt.com.bn/files/images/photos/2010-11-19/631ul.jpg";
-		
+
 		$external = &$externals[5177];
 		$external['external_id'] = 5177;
 		$external['service_id'] = 1;
@@ -611,7 +642,7 @@ class fixtures extends \Codeception\Module
 		$external['favicon_url'] = "https://twitter.com/favicons/favicon.ico";
 		$external['embed_html'] = "<blockquote class=\"twitter-tweet\"><p>Our <a href=\"https://twitter.com/search?q=%23verynice&amp;src=hash\">#verynice</a> guide for <a href=\"https://twitter.com/search?q=%23nonProfit&amp;src=hash\">#nonProfit</a> business development just got to its 6th continent within 72 hours of launch: <a href=\"http://t.co/UY0u7woGNt\">http://t.co/UY0u7woGNt</a></p>&mdash; Matthew Manos (@verynicetweets) <a href=\"https://twitter.com/verynicetweets/statuses/362058254773264384\">July 30, 2013</a></blockquote>\n";
 		$external['images'] = array();
-		
+
 		$external = &$externals[5178];
 		$external['external_id'] = 5178;
 		$external['service_id'] = 1;
@@ -627,7 +658,7 @@ class fixtures extends \Codeception\Module
 		$external['favicon_url'] = "https://twitter.com/favicons/favicon.ico";
 		$external['embed_html'] = "<blockquote class=\"twitter-tweet\"><p>Streetsblog Summer Series Rolls with Mega-Discussion on Bicycling in L.A. <a href=\"http://t.co/qhRWUYE7VC\">http://t.co/qhRWUYE7VC</a> via <a href=\"https://twitter.com/StreetsblogLA\">@streetsblogla</a></p>&mdash; Metro Library (@MetroLibrary) <a href=\"https://twitter.com/MetroLibrary/statuses/362058235403976704\">July 30, 2013</a></blockquote>\n";
 		$external['images'] = array();
-		
+
 		$external = &$externals[5176];
 		$external['external_id'] = 5176;
 		$external['service_id'] = 1;
@@ -643,7 +674,7 @@ class fixtures extends \Codeception\Module
 		$external['favicon_url'] = "https://twitter.com/favicons/favicon.ico";
 		$external['embed_html'] = "<blockquote class=\"twitter-tweet\"><p>Hoy, por cierto <a href=\"https://twitter.com/getur\">@getur</a>, me dice un trekkie: &quot;Este Khan me gustó por bla bla bla&quot;, mientra que yo gritaba como Kirk: Se me olvidó el estreno.</p>&mdash; Marcos Manzanares (@mamanzana) <a href=\"https://twitter.com/mamanzana/statuses/362058437502304257\">July 30, 2013</a></blockquote>\n";
 		$external['images'] = array();
-		
+
 		$external = &$externals[5175];
 		$external['external_id'] = 5175;
 		$external['service_id'] = 1;
@@ -659,7 +690,7 @@ class fixtures extends \Codeception\Module
 		$external['favicon_url'] = "https://twitter.com/favicons/favicon.ico";
 		$external['embed_html'] = "<blockquote class=\"twitter-tweet\"><p>apa yang main2 agama islam nya? kalau hina la sangat haiwan tu, takkan wujudnya di dunia ni.</p>&mdash; Syahira (@syahirasharif) <a href=\"https://twitter.com/syahirasharif/statuses/362050245204520961\">July 30, 2013</a></blockquote>\n";
 		$external['images'] = array();
-		
+
 		$external = &$externals[5174];
 		$external['external_id'] = 5174;
 		$external['service_id'] = 1;
@@ -675,7 +706,7 @@ class fixtures extends \Codeception\Module
 		$external['favicon_url'] = "https://twitter.com/favicons/favicon.ico";
 		$external['embed_html'] = "<blockquote class=\"twitter-tweet\"><p>Bueno, nuestra versión Caribe de los imprecisos Mayas (y demás falsos profetas, que por cierto hoy recoge <a href=\"https://twitter.com/PopSci\">@popsci</a> en&#10;<a href=\"http://t.co/tG7VkPwKVr\">http://t.co/tG7VkPwKVr</a>)</p>&mdash; Marcos Manzanares (@mamanzana) <a href=\"https://twitter.com/mamanzana/statuses/362049145151832064\">July 30, 2013</a></blockquote>\n";
 		$external['images'] = array();
-		
+
 		$external = &$externals[5172];
 		$external['external_id'] = 5172;
 		$external['service_id'] = 1;
@@ -691,7 +722,7 @@ class fixtures extends \Codeception\Module
 		$external['favicon_url'] = "https://twitter.com/favicons/favicon.ico";
 		$external['embed_html'] = "<blockquote class=\"twitter-tweet\"><p>... que si el valle de Caracas se es en realidad un supervolcán que el de Yellowstone se queda pendejo, y así.</p>&mdash; Marcos Manzanares (@mamanzana) <a href=\"https://twitter.com/mamanzana/statuses/362046576161591296\">July 30, 2013</a></blockquote>\n";
 		$external['images'] = array();
-		
+
 		$external = &$externals[5173];
 		$external['external_id'] = 5173;
 		$external['service_id'] = 1;
@@ -707,7 +738,7 @@ class fixtures extends \Codeception\Module
 		$external['favicon_url'] = "https://twitter.com/favicons/favicon.ico";
 		$external['embed_html'] = "<blockquote class=\"twitter-tweet\"><p>Hoy no faltaron los agoreros de turno, diciendo que en Caracas ocurre uno cada 40-50 años, que el Ávila se abrirá y el mar nos tragará...</p>&mdash; Marcos Manzanares (@mamanzana) <a href=\"https://twitter.com/mamanzana/statuses/362046246329925633\">July 30, 2013</a></blockquote>\n";
 		$external['images'] = array();
-		
+
 		$external = &$externals[5170];
 		$external['external_id'] = 5170;
 		$external['service_id'] = 1;
@@ -723,7 +754,7 @@ class fixtures extends \Codeception\Module
 		$external['favicon_url'] = "https://twitter.com/favicons/favicon.ico";
 		$external['embed_html'] = "<blockquote class=\"twitter-tweet\"><p>Hoy se cumplieron 46 años del Gran Terremoto, y entre los cuentos y este audio, los pelos se me ponen como escarpias <a href=\"http://t.co/gOF64jTkdM\">http://t.co/gOF64jTkdM</a></p>&mdash; Marcos Manzanares (@mamanzana) <a href=\"https://twitter.com/mamanzana/statuses/362045652680708096\">July 30, 2013</a></blockquote>\n";
 		$external['images'] = array();
-		
+
 		$external = &$externals[5171];
 		$external['external_id'] = 5171;
 		$external['service_id'] = 1;
@@ -739,7 +770,7 @@ class fixtures extends \Codeception\Module
 		$external['favicon_url'] = "https://twitter.com/favicons/favicon.ico";
 		$external['embed_html'] = "<blockquote class=\"twitter-tweet\"><p>What kinda fucked up shit is this? Nikah with Vodka sumore -_^ - Bride Kidnapping in Kyrgyzstan: <a href=\"http://t.co/eQjcZBQzfL\">http://t.co/eQjcZBQzfL</a></p>&mdash; Inbaraj ™ (@Inbarajs) <a href=\"https://twitter.com/Inbarajs/statuses/362045571705470977\">July 30, 2013</a></blockquote>\n";
 		$external['images'] = array();
-		
+
 		$external = &$externals[5169];
 		$external['external_id'] = 5169;
 		$external['service_id'] = 1;
@@ -755,7 +786,7 @@ class fixtures extends \Codeception\Module
 		$external['favicon_url'] = "https://twitter.com/favicons/favicon.ico";
 		$external['embed_html'] = "<blockquote class=\"twitter-tweet\"><p>&quot;Great place for RR&quot; @ The Grove Restaurant &amp; Tavern: <a href=\"http://t.co/kkEBqchCuJ\">http://t.co/kkEBqchCuJ</a> <a href=\"https://twitter.com/search?q=%23foursquare&amp;src=hash\">#foursquare</a></p>&mdash; Greg Narten (@quabojones22) <a href=\"https://twitter.com/quabojones22/statuses/362043098957758466\">July 30, 2013</a></blockquote>\n";
 		$external['images'] = array();
-		
+
 		$external = &$externals[5168];
 		$external['external_id'] = 5168;
 		$external['service_id'] = 1;
@@ -771,7 +802,7 @@ class fixtures extends \Codeception\Module
 		$external['favicon_url'] = "https://twitter.com/favicons/favicon.ico";
 		$external['embed_html'] = "<blockquote class=\"twitter-tweet\"><p>I liked a <a href=\"https://twitter.com/YouTube\">@YouTube</a> video <a href=\"http://t.co/N49nG1XC9k\">http://t.co/N49nG1XC9k</a> Michael Hastings Crash Caught On Surveillance Camera - New Footage</p>&mdash; Greg Narten (@quabojones22) <a href=\"https://twitter.com/quabojones22/statuses/362028569234382849\">July 30, 2013</a></blockquote>\n";
 		$external['images'] = array();
-		
+
 		$external = &$externals[5167];
 		$external['external_id'] = 5167;
 		$external['service_id'] = 1;
@@ -787,7 +818,7 @@ class fixtures extends \Codeception\Module
 		$external['favicon_url'] = "https://twitter.com/favicons/favicon.ico";
 		$external['embed_html'] = "<blockquote class=\"twitter-tweet\"><p>I actually hate this woman (<a href=\"https://twitter.com/YouTube\">@YouTube</a> <a href=\"http://t.co/awsHqBJRBd\">http://t.co/awsHqBJRBd</a>)</p>&mdash; Greg Narten (@quabojones22) <a href=\"https://twitter.com/quabojones22/statuses/362018051815772160\">July 30, 2013</a></blockquote>\n";
 		$external['images'] = array();
-		
+
 		$external = &$externals[5166];
 		$external['external_id'] = 5166;
 		$external['service_id'] = 1;
@@ -803,7 +834,7 @@ class fixtures extends \Codeception\Module
 		$external['favicon_url'] = "https://twitter.com/favicons/favicon.ico";
 		$external['embed_html'] = "<blockquote class=\"twitter-tweet\"><p>No black screen. Using YouTube ipad app (<a href=\"https://twitter.com/YouTube\">@YouTube</a> <a href=\"http://t.co/awsHqBJRBd\">http://t.co/awsHqBJRBd</a>)</p>&mdash; Greg Narten (@quabojones22) <a href=\"https://twitter.com/quabojones22/statuses/362017053428813824\">July 30, 2013</a></blockquote>\n";
 		$external['images'] = array();
-		
+
 		$external = &$externals[5164];
 		$external['external_id'] = 5164;
 		$external['service_id'] = 1;
@@ -819,7 +850,7 @@ class fixtures extends \Codeception\Module
 		$external['favicon_url'] = "https://twitter.com/favicons/favicon.ico";
 		$external['embed_html'] = "<blockquote class=\"twitter-tweet\"><p>Wonder which song (<a href=\"https://twitter.com/YouTube\">@YouTube</a> <a href=\"http://t.co/awsHqBJRBd\">http://t.co/awsHqBJRBd</a>)</p>&mdash; Greg Narten (@quabojones22) <a href=\"https://twitter.com/quabojones22/statuses/362015187341029376\">July 30, 2013</a></blockquote>\n";
 		$external['images'] = array();
-		
+
 		$external = &$externals[5165];
 		$external['external_id'] = 5165;
 		$external['service_id'] = 1;
@@ -835,67 +866,7 @@ class fixtures extends \Codeception\Module
 		$external['favicon_url'] = "https://twitter.com/favicons/favicon.ico";
 		$external['embed_html'] = "<blockquote class=\"twitter-tweet\"><p>I liked a <a href=\"https://twitter.com/YouTube\">@YouTube</a> video <a href=\"http://t.co/awsHqBJRBd\">http://t.co/awsHqBJRBd</a> The Young Turks - Live Show 9pm-11pm EDT 7.29.13</p>&mdash; Greg Narten (@quabojones22) <a href=\"https://twitter.com/quabojones22/statuses/362014782641025024\">July 30, 2013</a></blockquote>\n";
 		$external['images'] = array();
-		
-		$external = &$externals[4814];
-		$external['external_id'] = 4814;
-		$external['service_id'] = 5;
-		$external['provider'] = "Clicrbs";
-		$external['type'] = "html";
-		$external['id_on_service'] = "http://zerohora.clicrbs.com.br/rs/policia/noticia/2013/05/nyt-destaca-casos-de-estupro-no-rio-de-janeiro-4149798.html";
-		$external['content'] = "<p>\n Os episódios \"testam ideias de imagem e classe\", segundo o The New York Times Foto: Reprodução / Reprodução</p>\n<p>A sequência de estupros ocorridos recentemente em locais públicos do Rio de Janeiro foi tema de uma <a href=\"http://www.nytimes.com/2013/05/25/world/americas/rapes-in-brazil-spur-class-and-gender-debate.html?_r=1&amp;\" rel=\"nofollow\" target=\"_blank\"><strong>reportagem do jornal americano The New York Times</strong></a>, publicada na sexta-feira. </p>\n<p>O texto lembrou pelo menos três episódios dos últimos meses - entre eles, o <a href=\"http://zerohora.clicrbs.com.br/rs/policia/noticia/2013/03/turista-estrangeira-e-violentada-em-van-no-rio-4091457.html\" rel=\"nofollow\" target=\"_blank\"><strong>abuso sofrido por uma turista dentro de uma van</strong></a>, no final de março.O jornal comparou os casos aos estupros coletivos registrados na Índia, que provocaram tumultos e protestos, e com o surto de casos de abuso sexual ocorridos no Egito. </p>\n<p>Para o New York Times, as ocorrências do Rio representam uma contradição, no momento em que o Brasil tem a primeira presidente mulher, Dilma Rousseff, e que a Polícia Civil do Rio é chefiada por uma mulher, Martha Rocha.</p>\n<p>\"O Brasil tem uma uma presidente mulher, uma mulher como comandante da polícia e uma mulher como líder de sua companhia nacional de petróleo (Maria das Graças Foster, presidente da Petrobras) - e, mesmo assim, só depois de uma americana ter sido violentada as autoridades se envolveram a fundo e prenderam suspeitos do caso\", comenta o texto.</p>\n";
-		$external['datetime'] = 1374889089;
-		$external['lat'] = null;
-		$external['lon'] = null;
-		$external['url'] = "http://zerohora.clicrbs.com.br/rs/policia/noticia/2013/05/nyt-destaca-casos-de-estupro-no-rio-de-janeiro-4149798.html";
-		$external['title'] = "NYT destaca casos de estupro no Rio de Janeiro";
-		$external['favicon_url'] = "http://zerohora.rbsdirect.com.br/icon/zh.ico";
-		$external['embed_html'] = null;
-		$external['images'][0]['externals_images_id'] = 805;
-		$external['images'][0]['external_id'] = 4814;
-		$external['images'][0]['url'] = "http://zerohora.rbsdirect.com.br/imagesrc/15083685.jpg?w=620";
-		$external['images'][0]['selected'] = false;		
 
-		//the following objects are used in testing the POST against the externals end-point
-		
-		//These need to be changed to static objects that are included in the test. We should not be relying on external websites to test externals	
-		$externals[7006] = array();
-		
-		$external = &$externals[7006];
-		$external['external_id'] = 7006;
-		$external['service_id'] = 5;
-		$external['provider'] = "Ushahidi";
-		$external['type'] = "html";
-		$external['id_on_service'] = "http://blog.ushahidi.com/2014/04/14/testing-ushahidi-v2-7-3-upcoming-release/";
-		$external['content'] = "\n<p>We're almost ready for the next bug fix release of Ushahidi v2.7.3b, and we need your help!</p><p>\n<strong>What Needs Testing?</strong> Some of the key features and bugs we need help testing include:-</p><p>\n<strong>How To Help?</strong> There are two ways to test:</p><p>\n<strong>Testing Details</strong> We're using this <a href=\"https://docs.google.com/a/ushahidi.com/spreadsheet/ccc?key=0AliZbFolxKNedG1mOGhSYVZqOUpVTUxtYXFQVHItNlE&amp;usp=sharing#gid=0\" rel=\"nofollow\" target=\"_blank\">spreadsheet document </a>to track all our findings, which we will move over to our <a href=\"https://github.com/ushahidi/Ushahidi_Web/issues\" rel=\"nofollow\" target=\"_blank\">github issues</a> page once testing is complete.</p><p>\n<strong>Key Dates to Keep in Mind?</strong> \n</p>\n\n<ul><li>Code Freeze: <strong>10th April 2014</strong>\n</li>\n\t<li>Testing (Internal + Community): <strong>14th to 20th April 2014</strong>\n</li>\n\t<li>Community Co-testing Day: <strong>16th April 2014</strong>\n</li>\n\t<li>Fixes: <strong>21st April 2014</strong>\n</li>\n\t<li>Crowdmap Classic Upgrade: <strong>22nd April 2014</strong>\n</li>\n\t<li>2.7.3 Release: <strong>23rd April 2014</strong>\n</li>\n</ul>\n\n<p><strong>Co-testing Virtual Date?</strong> In the spirit of collaboration, we're setting up time for co - testing fun. Join us to co-test on <strong>Wednesday, April 16th, 2014</strong>. Skype (add ngelzy or sharonrutto), IRC (irc.freenode.net #ushahidi)</p>\n<p>Looking forward to having you join us!!!</p>\n";
-		$external['lat'] = null;
-		$external['lon'] = null;
-		$external['url'] = "http://blog.ushahidi.com/2014/04/14/testing-ushahidi-v2-7-3-upcoming-release/";
-		$external['title'] = "Testing Ushahidi v2.7.3 (Upcoming Release)";
-		$external['favicon_url'] = "http://blog.ushahidi.com/favicon.ico";
-		$external['embed_html'] = null;
-		$external['images'][0]['externals_images_id'] = 1029;
-		$external['images'][0]['external_id'] = 7006;
-		$external['images'][0]['url'] = "http://devcv.me/wp-content/uploads/2013/01/id5Jd.png";
-
-		$externals[7007] = array();
-		
-		$external = &$externals[7007];
-		$external['external_id'] = 7007;
-		$external['service_id'] = 1;
-		$external['provider'] = "Twitter";
-		$external['type'] = "html";
-		$external['id_on_service'] = "458614065963995137";
-		$external['content'] = "“@brcknet: The first production run of the BRCK ships to 45 countries in a couple weeks.” Happiness!!";
-		$external['lat'] = null;
-		$external['lon'] = null;
-		$external['url'] = null; //is this not being populated because of a problem in the local test environment?
-		$external['title'] = null;
-		$external['favicon_url'] = "https://twitter.com/favicons/favicon.ico";
-		$external['embed_html'] = "<blockquote class=\"twitter-tweet\"><p>“<a href=\"https://twitter.com/brcknet\">@brcknet</a>: The first production run of the BRCK ships to 45 countries in a couple weeks.” Happiness!!</p>&mdash; Ushahidi (@ushahidi) <a href=\"https://twitter.com/ushahidi/statuses/458614065963995137\">April 22, 2014</a></blockquote>\n";
-		$external['images'] = array();
-		
-		$externals[4814] = array();
-		
 		$external = &$externals[4814];
 		$external['external_id'] = 4814;
 		$external['service_id'] = 5;
@@ -914,14 +885,74 @@ class fixtures extends \Codeception\Module
 		$external['images'][0]['external_id'] = 4814;
 		$external['images'][0]['url'] = "http://zerohora.rbsdirect.com.br/imagesrc/15083685.jpg?w=620";
 		$external['images'][0]['selected'] = false;
-		
+
+		//the following objects are used in testing the POST against the externals end-point
+
+		//These need to be changed to static objects that are included in the test. We should not be relying on external websites to test externals
+		$externals[7006] = array();
+
+		$external = &$externals[7006];
+		$external['external_id'] = 7006;
+		$external['service_id'] = 5;
+		$external['provider'] = "Ushahidi";
+		$external['type'] = "html";
+		$external['id_on_service'] = "http://blog.ushahidi.com/2014/04/14/testing-ushahidi-v2-7-3-upcoming-release/";
+		$external['content'] = "\n<p>We're almost ready for the next bug fix release of Ushahidi v2.7.3b, and we need your help!</p><p>\n<strong>What Needs Testing?</strong> Some of the key features and bugs we need help testing include:-</p><p>\n<strong>How To Help?</strong> There are two ways to test:</p><p>\n<strong>Testing Details</strong> We're using this <a href=\"https://docs.google.com/a/ushahidi.com/spreadsheet/ccc?key=0AliZbFolxKNedG1mOGhSYVZqOUpVTUxtYXFQVHItNlE&amp;usp=sharing#gid=0\" rel=\"nofollow\" target=\"_blank\">spreadsheet document </a>to track all our findings, which we will move over to our <a href=\"https://github.com/ushahidi/Ushahidi_Web/issues\" rel=\"nofollow\" target=\"_blank\">github issues</a> page once testing is complete.</p><p>\n<strong>Key Dates to Keep in Mind?</strong> \n</p>\n\n<ul><li>Code Freeze: <strong>10th April 2014</strong>\n</li>\n\t<li>Testing (Internal + Community): <strong>14th to 20th April 2014</strong>\n</li>\n\t<li>Community Co-testing Day: <strong>16th April 2014</strong>\n</li>\n\t<li>Fixes: <strong>21st April 2014</strong>\n</li>\n\t<li>Crowdmap Classic Upgrade: <strong>22nd April 2014</strong>\n</li>\n\t<li>2.7.3 Release: <strong>23rd April 2014</strong>\n</li>\n</ul>\n\n<p><strong>Co-testing Virtual Date?</strong> In the spirit of collaboration, we're setting up time for co - testing fun. Join us to co-test on <strong>Wednesday, April 16th, 2014</strong>. Skype (add ngelzy or sharonrutto), IRC (irc.freenode.net #ushahidi)</p>\n<p>Looking forward to having you join us!!!</p>\n";
+		$external['lat'] = null;
+		$external['lon'] = null;
+		$external['url'] = "http://blog.ushahidi.com/2014/04/14/testing-ushahidi-v2-7-3-upcoming-release/";
+		$external['title'] = "Testing Ushahidi v2.7.3 (Upcoming Release)";
+		$external['favicon_url'] = "http://blog.ushahidi.com/favicon.ico";
+		$external['embed_html'] = null;
+		$external['images'][0]['externals_images_id'] = 1029;
+		$external['images'][0]['external_id'] = 7006;
+		$external['images'][0]['url'] = "http://devcv.me/wp-content/uploads/2013/01/id5Jd.png";
+
+		$externals[7007] = array();
+
+		$external = &$externals[7007];
+		$external['external_id'] = 7007;
+		$external['service_id'] = 1;
+		$external['provider'] = "Twitter";
+		$external['type'] = "html";
+		$external['id_on_service'] = "458614065963995137";
+		$external['content'] = "“@brcknet: The first production run of the BRCK ships to 45 countries in a couple weeks.” Happiness!!";
+		$external['lat'] = null;
+		$external['lon'] = null;
+		$external['url'] = null; //is this not being populated because of a problem in the local test environment?
+		$external['title'] = null;
+		$external['favicon_url'] = "https://twitter.com/favicons/favicon.ico";
+		$external['embed_html'] = "<blockquote class=\"twitter-tweet\"><p>“<a href=\"https://twitter.com/brcknet\">@brcknet</a>: The first production run of the BRCK ships to 45 countries in a couple weeks.” Happiness!!</p>&mdash; Ushahidi (@ushahidi) <a href=\"https://twitter.com/ushahidi/statuses/458614065963995137\">April 22, 2014</a></blockquote>\n";
+		$external['images'] = array();
+
+		$externals[4814] = array();
+
+		$external = &$externals[4814];
+		$external['external_id'] = 4814;
+		$external['service_id'] = 5;
+		$external['provider'] = "Clicrbs";
+		$external['type'] = "html";
+		$external['id_on_service'] = "http://zerohora.clicrbs.com.br/rs/policia/noticia/2013/05/nyt-destaca-casos-de-estupro-no-rio-de-janeiro-4149798.html";
+		$external['content'] = "<p>\n Os episódios \"testam ideias de imagem e classe\", segundo o The New York Times Foto: Reprodução / Reprodução</p>\n<p>A sequência de estupros ocorridos recentemente em locais públicos do Rio de Janeiro foi tema de uma <a href=\"http://www.nytimes.com/2013/05/25/world/americas/rapes-in-brazil-spur-class-and-gender-debate.html?_r=1&amp;\" rel=\"nofollow\" target=\"_blank\"><strong>reportagem do jornal americano The New York Times</strong></a>, publicada na sexta-feira. </p>\n<p>O texto lembrou pelo menos três episódios dos últimos meses - entre eles, o <a href=\"http://zerohora.clicrbs.com.br/rs/policia/noticia/2013/03/turista-estrangeira-e-violentada-em-van-no-rio-4091457.html\" rel=\"nofollow\" target=\"_blank\"><strong>abuso sofrido por uma turista dentro de uma van</strong></a>, no final de março.O jornal comparou os casos aos estupros coletivos registrados na Índia, que provocaram tumultos e protestos, e com o surto de casos de abuso sexual ocorridos no Egito. </p>\n<p>Para o New York Times, as ocorrências do Rio representam uma contradição, no momento em que o Brasil tem a primeira presidente mulher, Dilma Rousseff, e que a Polícia Civil do Rio é chefiada por uma mulher, Martha Rocha.</p>\n<p>\"O Brasil tem uma uma presidente mulher, uma mulher como comandante da polícia e uma mulher como líder de sua companhia nacional de petróleo (Maria das Graças Foster, presidente da Petrobras) - e, mesmo assim, só depois de uma americana ter sido violentada as autoridades se envolveram a fundo e prenderam suspeitos do caso\", comenta o texto.</p>\n";
+		$external['datetime'] = 1374889089;
+		$external['lat'] = null;
+		$external['lon'] = null;
+		$external['url'] = "http://zerohora.clicrbs.com.br/rs/policia/noticia/2013/05/nyt-destaca-casos-de-estupro-no-rio-de-janeiro-4149798.html";
+		$external['title'] = "NYT destaca casos de estupro no Rio de Janeiro";
+		$external['favicon_url'] = "http://zerohora.rbsdirect.com.br/icon/zh.ico";
+		$external['embed_html'] = null;
+		$external['images'][0]['externals_images_id'] = 805;
+		$external['images'][0]['external_id'] = 4814;
+		$external['images'][0]['url'] = "http://zerohora.rbsdirect.com.br/imagesrc/15083685.jpg?w=620";
+		$external['images'][0]['selected'] = false;
+
 		return $externals;
 	}
 
 	public static function usersArray()
 	{
 		$users = array();
-		
+
 		$user = &$users[7982];
 		$user['user_id'] = 7982;
 		$user['crowdmap_id'] = "7bb9656fa32cd0c2f4cffb82e66d1699ff281dbc8561a36a58aecc71c449fdf0c255417e2ffe3af15c0f7f8df87a27e9f0c95f3acd36aa86426662521afc332a";
@@ -939,7 +970,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7981];
 		$user['user_id'] = 7981;
 		$user['crowdmap_id'] = "1e558381217a853a19be1a458b9ff084960380dc1b0f18e2c65b38616732cbd7fcf72917abfa5e050414bdd9bb0b1ae9d1e5cb529142fa94e67fc129974a3c22";
@@ -957,7 +988,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7980];
 		$user['user_id'] = 7980;
 		$user['crowdmap_id'] = "d344e030f98e16aab19f546bd5051e6652beb90b563fe214d6389de250f9ecb7e2ec71707935dc88a26029176e4498a920853857d8ca2fa5011444e784a7ebbd";
@@ -975,7 +1006,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7979];
 		$user['user_id'] = 7979;
 		$user['crowdmap_id'] = "dc34bac543f445b1458bd4baa86a0f3626a5fe8c2251a5450e42a87f2df2e1828b3c2c27635b03c8b8db6beafa150b80a62e7883217a8cdacbc25895fa6e4ead";
@@ -993,7 +1024,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7978];
 		$user['user_id'] = 7978;
 		$user['crowdmap_id'] = "70691677b037e985361f64d696250db5547b3fcc17f8040fba445b08c658ad4df533d84ef525abe2006dfda99c6d7e2a2e046ec69fe8656531bfa758817f655b";
@@ -1011,7 +1042,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7977];
 		$user['user_id'] = 7977;
 		$user['crowdmap_id'] = "9b6f57db48ecc5ae4fab0c5c990143f7a241db380288011523b26c398137bf83773dca2f08b4344363d98e4ed6d31741bbd26eb2da296ad75263e9ba1090fca8";
@@ -1029,7 +1060,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7976];
 		$user['user_id'] = 7976;
 		$user['crowdmap_id'] = "f9cf68641590ee0ea60e8b05a0afeaf4e95f1d05aaf2aff1f59f58df30921ecef70ea86e723a1f81d4bf1b3abb9c2b9ff62e8e96c08fd8570fde5ea7397a8228";
@@ -1047,7 +1078,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7975];
 		$user['user_id'] = 7975;
 		$user['crowdmap_id'] = "fd9689a8f1b9ecd6ea83ffd6097773bb92e7c42a4079188f820e90923ea752063cb4feffdb46dce764a0db67a6c6bd741c8447bdef9e1603f03473db07705ce5";
@@ -1065,7 +1096,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7974];
 		$user['user_id'] = 7974;
 		$user['crowdmap_id'] = "756883e683da4c8fcd0ded982f6a795791194adee8877604a29ac10caef199339dc22d19f97e333ed182741d22d3b2a03c1dfeaebf198d3054fe785ab88685b1";
@@ -1083,7 +1114,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7973];
 		$user['user_id'] = 7973;
 		$user['crowdmap_id'] = "de6666f9c2c0941803c6ae4a81fbbe3a9722a6cdd6cf196ac446ec1622a8f6f33ca2ff8a05f80fa997ceaceab351cebd77ecd039a3793dcabef7f728502d6d78";
@@ -1101,7 +1132,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7972];
 		$user['user_id'] = 7972;
 		$user['crowdmap_id'] = "5766f64b9b8c9407cf2c3759e97476f883688d63a1fd3e66ef42e5dd047c41765286e2265db69763e745e811c33d544157342da50dfb74b913771ddcdb28a208";
@@ -1119,7 +1150,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7971];
 		$user['user_id'] = 7971;
 		$user['crowdmap_id'] = "04032536e088c90555a85f825e816c304be4215378fa2af26ee271094853c9ccd25a0b3e0101c5f5ab7407350a385592f695d2b10e980610ec1b20c9b9928f4d";
@@ -1137,7 +1168,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7970];
 		$user['user_id'] = 7970;
 		$user['crowdmap_id'] = "c0226475eede419e68b07421893f58a7d17f37f4ce32372d7dc16acfbff00801080fa5323e7f1c10ac0100f315d9b04403a47002923508aa5dff1af121dafd61";
@@ -1155,7 +1186,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7969];
 		$user['user_id'] = 7969;
 		$user['crowdmap_id'] = "9446fefa597bca0b3923e2130de92707279e660b092b2df26a2d7907e6f03789a8ddda48de401ea77d0cb105784ba0a4aec95e14783e08cd0d46baeb291ce934";
@@ -1173,7 +1204,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7968];
 		$user['user_id'] = 7968;
 		$user['crowdmap_id'] = "53c6c39cf7e29248e0503f7483d4269277e4bf3c2c1e6bfbff1478d441b00212de5267fb17643461d9b99bc7ff4ef044ad64c1dd4b219aaa6884a0022a8d167c";
@@ -1191,7 +1222,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7967];
 		$user['user_id'] = 7967;
 		$user['crowdmap_id'] = "c4bc36f4a04a6a26e59074ef26bc10a89b127df8db2c9ddfea3255e0cf1fb13005a1be33a47e0076a13119d19b065d75febb5b6c1d201bfbbcdafb4769a87d2d";
@@ -1209,7 +1240,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7966];
 		$user['user_id'] = 7966;
 		$user['crowdmap_id'] = "69df3e7c4dca89168bdf46ea1c012f1ae5a8ad8d5058abbbe9e544e5b87539118534da5756fd8005a148271cc30a8e8eb901bdd87d738af7ebb68559529b4c1a";
@@ -1227,7 +1258,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7965];
 		$user['user_id'] = 7965;
 		$user['crowdmap_id'] = "36706972ed1e6453afdf7212efbf39b064d5a113a6d5454803f4c41dd2414bebfe6b5ab9be5543ddb3f12f4d1d9e134e68ad0227c7b49e344c813bc81c0c25e7";
@@ -1245,7 +1276,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7964];
 		$user['user_id'] = 7964;
 		$user['crowdmap_id'] = "4f675ff621d30eda29a77498bf0bc1b27f3e14cdf2bc86493ca0ef02ebe7f59468dfd52463c335ec2ed49e3969a045348cd79a45b453326142ff6ece7b85fe04";
@@ -1263,7 +1294,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7963];
 		$user['user_id'] = 7963;
 		$user['crowdmap_id'] = "eeb5d593882c9d4582f0410b13156ad9eac78b861ec58a5af4ebc72a2c5034d784d522cab1e560df37bb7d4dd43c765030e16f08bf6fce7b5659b0afb72d8f40";
@@ -1281,7 +1312,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[3063];
 		$user['user_id'] = 3063;
 		$user['crowdmap_id'] = "27ee58b40ae7e5b671723b157f05477c1cde9590a9ff1fb5423be1d2787e465b7d3bcc17ec8a0a828f94f43f7b769a358dceea94a74c8491cce4a588a7826d33";
@@ -1317,7 +1348,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[1947];
 		$user['user_id'] = 1947;
 		$user['crowdmap_id'] = "4329e6adaeda86b213385fb097acf6662db32d46bb04eaca99aecf5b0454b29686ebc02c9942bdc7dac0652880005a94e88b6088e02bd46968ae992488748e64";
@@ -1335,7 +1366,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[2766];
 		$user['user_id'] = 2766;
 		$user['crowdmap_id'] = "060f8f10527a820d0f90f597d91b58add9d8209f910b10c0f9bfe7daca8d74270d2b8e9e5fb03188108a8f2f88f4cd9515a4b96cf80f443b11f22dbde18a8fa2";
@@ -1353,7 +1384,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[2704];
 		$user['user_id'] = 2704;
 		$user['crowdmap_id'] = "365f33ad4f3a2084d7e9400ca81d2792c99024f04e4e937be2f2389905192d27b4af737b8861017acc378b46af838b7ced5a75fd66da8d276875fa81ddd560c8";
@@ -1371,7 +1402,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[1];
 		$user['user_id'] = 1;
 		$user['crowdmap_id'] = "";
@@ -1388,7 +1419,7 @@ class fixtures extends \Codeception\Module
 		$user['banned'] = false;
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
-		
+
 		$user = &$users[6657];
 		$user['user_id'] = 6657;
 		$user['crowdmap_id'] = "6d017506671d5e5d6bbd14c2ce0159713f106c5b75208ad4d2540683026801afd2f0c79ee339f2584bcd7306f0bb6a8cd681aa9f1ad7d4be3c6c881f32efc0af";
@@ -1406,7 +1437,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = "https://www.gravatar.com/avatar/62502587065b90b5c1ee581e9952e4b0?r=PG&s=200&d=404";
-		
+
 		$user = &$users[2990];
 		$user['user_id'] = 2990;
 		$user['crowdmap_id'] = "db319cfda69c3fc879e636742878e026d0e0adfc88198b564075102f1adca023e58aa290c332c6b75180b38f2725f16b76d31416fc2679b8a78c2dcd1d5b2cc6";
@@ -1550,7 +1581,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7952];
 		$user['user_id'] = 7952;
 		$user['crowdmap_id'] = "ebfa1d81bc5c87a5cd81318b79f4670b611b46d2dc860151679d379718158576a8f98bd1f57acb3cb5c5800c9985d726cb797912be79d85a28fe9c6ed94fd95d";
@@ -1568,7 +1599,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7951];
 		$user['user_id'] = 7951;
 		$user['crowdmap_id'] = "a8b6e52ec9d563a86178c857f98a23e8831130a4189fffe2c05f3270d356839c42ae5dad0ec7bdab8d85a78ebfd42c33ffa0ff84225f3ed5ecb6beb1e82d00ac";
@@ -1586,7 +1617,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7950];
 		$user['user_id'] = 7950;
 		$user['crowdmap_id'] = "89182389f2ec430e4995f40ee2a092cf8edd2e7ece8581bcc0fc4bb48ee79479c61c4e3386782612813bc1a857264076ab716c20c779a3604f1550c00b65ecb1";
@@ -1604,7 +1635,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7949];
 		$user['user_id'] = 7949;
 		$user['crowdmap_id'] = "62f85b640bfabdae7411ff606a444d7d581f0117d081ba7233adf17d799ee48858f804d780c6bd859eacd3bcb405f68c3b3054a9cb204b62856b6aea90f94d1d";
@@ -1658,7 +1689,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[5639];
 		$user['user_id'] = 5639;
 		$user['crowdmap_id'] = "8d235eafa6b2a699ef4f658407d7d29a73bed300d46241f1a6d3984c04bab5dab2fe78944a360e8c7bb4b627d8cdfe1f8e1a7bb65a49bab5f8533d7dc91e2032";
@@ -1676,7 +1707,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[5461];
 		$user['user_id'] = 5461;
 		$user['crowdmap_id'] = "6d61eba3db34392a5d0519652491003aedc3308c110b73562989c7fb09bf62af84b9a20efae0e17d72f9aac592ab0be254ea4e77d14ec621d8755e05f25fc1ad";
@@ -1694,7 +1725,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[2994];
 		$user['user_id'] = 2994;
 		$user['crowdmap_id'] = "43e7392f3238e0735ca5e35cf33d0ac620be2987b713be68f5a64e01ab916792cc0e159fdf24f560cc4378d98c4e5170422b95f9286367b4d66cc1a972f6ffe4";
@@ -1712,7 +1743,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[7912];
 		$user['user_id'] = 7912;
 		$user['crowdmap_id'] = "203e8ffb7bc3178f1dbc77c16e5fcbe88ba4b0659b3fcc3488578330798402153365f13b4370868d54172630a149ff72d245f3a8930d94e7a364751b6f54d95e";
@@ -1730,7 +1761,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[2299];
 		$user['user_id'] = 2299;
 		$user['crowdmap_id'] = "a41d09faa47e14f38ed2bfbae7deb785a0e54370e5e650a47914ea4feba96880f70b3d7d344610da058efa00b0fed0b4b1aea1c8706055ca3ad17529470f8eb3";
@@ -1748,7 +1779,7 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-		
+
 		$user = &$users[1607];
 		$user['user_id'] = 1607;
 		$user['crowdmap_id'] = "7051816c74f9e66301d5cf7913c59c6d5c6ececfbac46f146a09149e720d13170f297ec7860376198a49ab836289fd6686d47cc4e706283942feafb21a88b3b6";
@@ -1766,17 +1797,17 @@ class fixtures extends \Codeception\Module
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
-				
+
 		return $users;
 	}
-	
+
 	public static function mapsArray()
 	{
-		
+
 		$users = self::usersArray();
-		
+
 		$maps = array();
-		
+
 		$map = &$maps[1810];
 		$map['approved'] = true;
 		$map['map_id'] = 1810;
@@ -1796,7 +1827,7 @@ class fixtures extends \Codeception\Module
 		$map['center']['coordinates'][1] = "-20.8222750451";
 		$map['post_count'] = 19;
 		$map['marker'] = false;
-		
+
 		$map = &$maps[1605];
 		$map['approved'] = true;
 		$map['map_id'] = 1605;
@@ -1816,7 +1847,7 @@ class fixtures extends \Codeception\Module
 		$map['center']['coordinates'][1] = "38.190518751985";
 		$map['post_count'] = 3;
 		$map['marker'] = false;
-		
+
 		$map = &$maps[4985];
 		$map['map_id'] = 4985;
 		$map['users'][0] = $users[7981];
@@ -1908,7 +1939,7 @@ class fixtures extends \Codeception\Module
 		$map['post_count'] = 0;
 		$map['followers'] = 1;
 		$map['post_limit'] = 10000;
-		
+
 		$map = &$maps[4980];
 		$map['map_id'] = 4980;
 		$map['users'][0] = $users[7972];
@@ -1926,7 +1957,7 @@ class fixtures extends \Codeception\Module
 		$map['followers'] = 1;
 		$map['post_limit'] = 10000;
 		$map['center'] = null;
-		
+
 		$map = &$maps[4979];
 		$map['map_id'] = 4979;
 		$map['users'][0] = $users[7971];
@@ -1942,11 +1973,11 @@ class fixtures extends \Codeception\Module
 		$map['date_created'] = 1395239715;
 		$map['center']['type'] = "Point";
 		$map['center']['coordinates'][0] = "18.52294921875";
-		$map['center']['coordinates'][1] = "59.377988012639";		
+		$map['center']['coordinates'][1] = "59.377988012639";
 		$map['post_count'] = 0;
 		$map['followers'] = 1;
 		$map['post_limit'] = 10000;
-	
+
 		$map = &$maps[4978];
 		$map['map_id'] = 4978;
 		$map['users'][0] = $users[7969];
@@ -2002,7 +2033,7 @@ class fixtures extends \Codeception\Module
 		$map['post_count'] = 0;
 		$map['followers'] = 1;
 		$map['post_limit'] = 10000;
-		
+
 		$map = &$maps[4975];
 		$map['map_id'] = 4975;
 		$map['users'][0] = $users[7962];
@@ -2188,7 +2219,7 @@ class fixtures extends \Codeception\Module
 		$map['followers'] = 1;
 		$map['post_limit'] = 10000;
 		$map['center'] = null;
-		
+
 		$map = &$maps[4947];
 		$map['map_id'] = 4947;
 		$map['users'][0] = $users[7912];
@@ -2206,7 +2237,7 @@ class fixtures extends \Codeception\Module
 		$map['followers'] = 1;
 		$map['post_limit'] = 10000;
 		$map['center'] = null;
-		
+
 		$map = &$maps[4151];
 		$map['map_id'] = 4151;
 		$map['users'][0] = $users[5461];
@@ -2226,7 +2257,7 @@ class fixtures extends \Codeception\Module
 		$map['post_count'] = 0;
 		$map['followers'] = 1;
 		$map['post_limit'] = 10000;
-		
+
 		$map = &$maps[4460];
 		$map['map_id'] = 4460;
 		$map['users'][0] = $users[5461];
@@ -2246,7 +2277,7 @@ class fixtures extends \Codeception\Module
 		$map['post_count'] = 0;
 		$map['followers'] = 1;
 		$map['post_limit'] = 10000;
-		
+
 		$map = &$maps[4462];
 		$map['map_id'] = 4462;
 		$map['users'][0] = $users[5461];
@@ -2264,7 +2295,7 @@ class fixtures extends \Codeception\Module
 		$map['followers'] = 1;
 		$map['post_limit'] = 10000;
 		$map['center'] = null;
-		
+
 		$map = &$maps[4649];
 		$map['map_id'] = 4649;
 		$map['users'] = $users[5461];
@@ -2284,7 +2315,7 @@ class fixtures extends \Codeception\Module
 		$map['post_count'] = 0;
 		$map['followers'] = 1;
 		$map['post_limit'] = 10000;
-		
+
 		$map = &$maps[1813];
 		$map['approved'] = true;
 		$map['map_id'] = 1813;
@@ -2304,7 +2335,7 @@ class fixtures extends \Codeception\Module
 		$map['center']['coordinates'][1] = "52.249443888935";
 		$map['post_count'] = 14;
 		$map['marker'] = false;
-		
+
 		$map = &$maps[1405];
 		$map['approved'] = true;
 		$map['map_id'] = 1405;
@@ -2324,7 +2355,7 @@ class fixtures extends \Codeception\Module
 		$map['center']['coordinates'][1] = "51.036072803536";
 		$map['post_count'] = 2;
 		$map['marker'] = false;
-		
+
 		$map = &$maps[952];
 		$map['approved'] = true;
 		$map['map_id'] = 952;
@@ -2344,31 +2375,31 @@ class fixtures extends \Codeception\Module
 		$map['center']['coordinates'][1] = "52.541867156322";
 		$map['post_count'] = 43;
 		$map['marker'] = false;
-																
+
 		return $maps;
-	
+
 	}
 
 	public static function commentsArray()
 	{
-	
+
 		$comments = array();
-		
+
 		$comment = &$comments['604'];
 		$comment['comment_id'] = 604;
 		$comment['map_id'] = 0;
 		$comment['user_id'] = 1;
 		$comment['comment'] = "<p>ci vediamo sabato cosi mi spieghi come fare x postare le foto. besos!</p>";
 		$comment['date_posted'] = 1373578259;
-		
+
 		return $comments;
-		
+
 	}
 
 	public static function mediaArray()
 	{
 		$media = array();
-		
+
 		$media_obj = &$media[1202];
 		$media_obj['media_id'] = 1202;
 		$media_obj['user_id'] = 1;
@@ -2416,22 +2447,22 @@ class fixtures extends \Codeception\Module
 		$media_obj['mime'] = "image/jpeg";
 		$media_obj['dominant_color'] = "ffffff";
 		$media_obj['webp'] = false;
-				
+
 		return $media;
-	
-	}		
+
+	}
 	public static function postsArray()
 	{
-	
+
 		$locations = self::locationsArray();
 		$externals = self::externalsArray();
 		$users = self::usersArray();
 		$maps = self::mapsArray();
 		$comments = self::commentsArray();
 		$media = self::mediaArray();
-		
+
 		$posts = array();
-		
+
 		$user = $users[3063];
 		$post = &$posts[11626];
 		$post['externals'] = array();
@@ -2521,7 +2552,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'] = array();
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[1947];
 		$post = &$posts[11625];
 		$post['externals'][0] = $externals[5176];
@@ -2550,7 +2581,7 @@ class fixtures extends \Codeception\Module
 		$post['stub'] = "";
 		$post['tags'] = array();
 		$post['likes'] = array();
-		$post['comments'] = array();		
+		$post['comments'] = array();
 
 		$user = $users[6657];
 		$post = &$posts[11624];
@@ -2575,14 +2606,14 @@ class fixtures extends \Codeception\Module
 		$post['owner']['type'] = "user";
 		$post['owner']['name'] = $user['name'];
 		$post['owner']['avatar'] = $user['avatar'];
-		$post['owner']['url'] = "/user/".$user['username'];		
+		$post['owner']['url'] = "/user/".$user['username'];
 		$post['permissions']['edit'] = false;
 		$post['permissions']['delete'] = false;
 		$post['stub'] = "im-in-rsa-but-iv-a-sister-who-lives-it-chiredzi-she";
 		$post['tags'] = array();
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[3063];
 		$post = &$posts[11623];
 		$post['externals'] = array();
@@ -2611,8 +2642,8 @@ class fixtures extends \Codeception\Module
 		$post['stub'] = "in-bindura-area-there-were-sporadic-instances-of-violence";
 		$post['tags'] = array();
 		$post['likes'] = array();
-		$post['comments'] = array();		
-		
+		$post['comments'] = array();
+
 		$user = $users[2766];
 		$post = &$posts[11622];
 		$post['externals'][0] = $externals[5175];
@@ -2642,7 +2673,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'] = array();
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[1947];
 		$post = &$posts[11621];
 		$post['externals'][0] = $externals[5174];
@@ -2672,7 +2703,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'] = array();
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[3063];
 		$post = &$posts[11620];
 		$post['externals'] = array();
@@ -2702,7 +2733,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'] = array();
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[1947];
 		$post = &$posts[11618];
 		$post['externals'][0] = $externals[5172];
@@ -2732,7 +2763,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'] = array();
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[1947];
 		$post = &$posts[11619];
 		$post['externals'][0] = $externals[5173];
@@ -2762,7 +2793,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'] = array();
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[1947];
 		$post = &$posts[11616];
 		$post['externals'][0] = $externals[5170];
@@ -2792,7 +2823,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'] = array();
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[2766];
 		$post = &$posts[11617];
 		$post['externals'][0] = $externals[5171];
@@ -2822,7 +2853,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'] = array();
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[2704];
 		$post = &$posts[11615];
 		$post['externals'][0] = $externals[5169];
@@ -2852,7 +2883,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'] = array();
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[2704];
 		$post = &$posts[11614];
 		$post['externals'][0] = $externals[5168];
@@ -2882,7 +2913,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'] = array();
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[2704];
 		$post = &$posts[11612];
 		$post['externals'][0] = $externals[5167];
@@ -2912,7 +2943,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'] = array();
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[2704];
 		$post = &$posts[11611];
 		$post['externals'][0] = $externals[5166];
@@ -2942,7 +2973,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'] = array();
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[2704];
 		$post = &$posts[11609];
 		$post['externals'][0] = $externals[5164];
@@ -2972,7 +3003,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'] = array();
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[2704];
 		$post = &$posts[11610];
 		$post['externals'][0] = $externals[5165];
@@ -3001,8 +3032,8 @@ class fixtures extends \Codeception\Module
 		$post['stub'] = "";
 		$post['tags'] = array();
 		$post['likes'] = array();
-		$post['comments'] = array();	
-		
+		$post['comments'] = array();
+
 		$user = $users[1];
 		$post = &$posts[11608];
 		$post['externals'] = array();
@@ -3033,7 +3064,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'] = array();
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[1];
 		$post = &$posts[11140];
 		$post['externals'][0] = $externals[4814];
@@ -3092,8 +3123,8 @@ class fixtures extends \Codeception\Module
 		$post['stub'] = "november-1998-princess-hend-al-fassi-and-her-husband";
 		$post['tags'] = array();
 		$post['likes'] = array();
-		$post['comments'] = array();		
-		
+		$post['comments'] = array();
+
 		$user = $users[1];
 		$post = &$posts[8086];
 		$post['externals'] = array();
@@ -3187,7 +3218,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'] = array();
 		$post['likes'][0]['user_id'] = 2728;
 		$post['comments'][0] = $comments[604];
-		
+
 		$user = $users[2299];
 		$post = &$posts[5215];
 		$post['externals'] = array();
@@ -3218,7 +3249,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'][1] = array("tag"=>"yyccleansup");
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[1];
 		$post = &$posts[2410];
 		$post['externals'] = array();
@@ -3248,7 +3279,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'][0] = array("tag"=>"occupygezi");
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[1];
 		$post = &$posts[2400];
 		$post['externals'] = array();
@@ -3278,7 +3309,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'][0] = array("tag"=>"OccupyGezi");
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[1];
 		$post = &$posts[2399];
 		$post['externals'] = array();
@@ -3308,7 +3339,7 @@ class fixtures extends \Codeception\Module
 		$post['tags'][0] = array("tag"=>"OccupyGezi");
 		$post['likes'] = array();
 		$post['comments'] = array();
-		
+
 		$user = $users[1];
 		$post = &$posts[2349];
 		$post['externals'] = array();
@@ -3338,9 +3369,9 @@ class fixtures extends \Codeception\Module
 		$post['tags'][0] = array("tag"=>"dirensamsun");
 		$post['likes'] = array();
 		$post['comments'] = array();
-						
+
 		return $posts;
-		
+
 	}
 
 }
