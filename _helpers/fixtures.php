@@ -2571,7 +2571,7 @@ class fixtures extends \Codeception\Module
 		$post['public'] = true;
 		$post['forig_shortcode'] = null;
 		$post['autoposted'] = "0";
-		$post['date_updated'] = 1375155698;
+		$post['date_updated'] = 1402423489;
 		$post['owner']['type'] = "user";
 		$post['owner']['name'] = $user['name'];
 		$post['owner']['avatar'] = $user['avatar'];
