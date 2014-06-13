@@ -10,7 +10,7 @@ $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 $resp = $I->grabResponse();
-$I->checkPostObjs($resp, array(13016, 13015));
+$I->checkUserObjs($resp, array(13016, 13015));
 
 // testing count with user_id
 $I->sendGet('/users/7968/posts', array('count' => TRUE, 'apikey'=> (string) $I->api_key_for_crowdmap('/users/7968/posts', 'GET'));
@@ -28,7 +28,7 @@ $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 $resp = $I->grabResponse();
-$I->checkPostObjs($resp, array(13016, 13015));
+$I->checkUserObjs($resp, array(13016, 13015));
 
 // testing count request with crowdmapID
 $I->sendGet('/users/53c6c39cf7e29248e0503f7483d4269277e4bf3c2c1e6bfbff1478d441b00212de5267fb17643461d9b99bc7ff4ef044ad64c1dd4b219aaa6884a0022a8d167c/posts', array('count' => TRUE, 'apikey'=> (string) $I->api_key_for_crowdmap('/users/53c6c39cf7e29248e0503f7483d4269277e4bf3c2c1e6bfbff1478d441b00212de5267fb17643461d9b99bc7ff4ef044ad64c1dd4b219aaa6884a0022a8d167c/posts', 'GET'));
@@ -45,7 +45,7 @@ $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 $resp = $I->grabResponse();
-$I->checkPostObjs($resp, array(13016, 13015));
+$I->checkUserObjs($resp, array(13016, 13015));
 
 // testing count request with username
 $I->sendGet('/users/dmastermind/posts', array('count' => TRUE, 'apikey'=> (string) $I->api_key_for_crowdmap('/users/dmastermind/posts', 'GET'));

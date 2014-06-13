@@ -15,7 +15,7 @@ $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 $resp = $I->grabResponse();
-$I->checkMapObjs($resp, array(4151,4460,4462,4649));
+$I->checkUserObjs($resp, array(4151,4460,4462,4649));
 
 $I->sendGet('/users/6d61eba3db34392a5d0519652491003aedc3308c110b73562989c7fb09bf62af84b9a20efae0e17d72f9aac592ab0be254ea4e77d14ec621d8755e05f25fc1ad/maps/owns/', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/6d61eba3db34392a5d0519652491003aedc3308c110b73562989c7fb09bf62af84b9a20efae0e17d72f9aac592ab0be254ea4e77d14ec621d8755e05f25fc1ad/maps/owns/', 'GET'), 'session'=> (string) $session));
 $I->seeResponseCodeIs(200);
@@ -23,7 +23,7 @@ $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 $resp = $I->grabResponse();
-$I->checkMapObjs($resp, array(4151,4460,4462,4649));
+$I->checkUserObjs($resp, array(4151,4460,4462,4649));
 
 $I->sendGet('/users/johnlevermore/maps/owns/', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/johnlevermore/maps/owns/', 'GET'), 'session'=> (string) $session));
 $I->seeResponseCodeIs(200);
@@ -31,7 +31,7 @@ $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 $resp = $I->grabResponse();
-$I->checkMapObjs($resp, array(4151,4460,4462,4649));
+$I->checkUserObjs($resp, array(4151,4460,4462,4649));
 
 $I->sendGet('/users/2015/maps/owns/', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/johnlevermore/maps/owns/', 'GET'), 'session'=> (string) $session));
 $I->seeResponseCodeIs(200);
