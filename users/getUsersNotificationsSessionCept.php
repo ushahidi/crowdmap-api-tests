@@ -69,9 +69,9 @@ $I->seeResponseContainsJson(array('success' => true));
 $I->sendGet('/users/returnofthejedi/notifications', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/returnofthejedi/notifications', 'GET'));
 $I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('posts' => array()));
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContainsJson(array('notifications' => array()));
 
 /* test count with a bad username */
 $I->sendGet('/users/returnofthejedi/notifications', array('count' => TRUE, 'apikey'=> (string) $I->api_key_for_crowdmap('/users/returnofthejedi/notifications', 'GET'));
@@ -85,9 +85,9 @@ $I->seeResponseContainsJson(array('success' => true));
 $I->sendGet('/users/100000/notifications', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/100000/notifications', 'GET'));
 $I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('posts' => array()));
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContainsJson(array('notifications' => array()));
 
 /* test count with a bad user_id */
 $I->sendGet('/users/100000/notifications', array('count' => TRUE, 'apikey'=> (string) $I->api_key_for_crowdmap('/users/100000/notifications', 'GET'));
