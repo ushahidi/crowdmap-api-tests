@@ -47,7 +47,7 @@ $I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
-$I->seeResponseContainsJson(array('maps' => array()));
+$I->seeResponseContainsJson(array('users' => array()));
 
 $I->sendGet('/users/3436/follows/11234/');
 $I->seeResponseCodeIs(200);
