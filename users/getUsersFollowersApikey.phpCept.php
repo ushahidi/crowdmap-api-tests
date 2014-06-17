@@ -10,7 +10,7 @@ $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 $resp = $I->grabResponse();
-$I->checkUserObjs($resp, array(4981, 4982));
+$I->checkUserObjs($resp, array(2,3));
 
 $I->sendGet('/users/9b6f57db48ecc5ae4fab0c5c990143f7a241db380288011523b26c398137bf83773dca2f08b4344363d98e4ed6d31741bbd26eb2da296ad75263e9ba1090fca8/followers/',
   array('apikey'=> (string) $I->api_key_for_crowdmap('/users/9b6f57db48ecc5ae4fab0c5c990143f7a241db380288011523b26c398137bf83773dca2f08b4344363d98e4ed6d31741bbd26eb2da296ad75263e9ba1090fca8/followers/', 'GET'));
@@ -19,7 +19,7 @@ $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 $resp = $I->grabResponse();
-$I->checkUserObjs($resp, array(4981, 4982));
+$I->checkUserObjs($resp, array(2,3));
 
 $I->sendGet('/users/sarahmorden/followers/', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/sarahmorden/followers/', 'GET'));
 $I->seeResponseCodeIs(200);
@@ -27,20 +27,12 @@ $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 $resp = $I->grabResponse();
-$I->checkUserObjs($resp, array(4981, 4982));
-
-$I->sendGet('/users/sarahmorden/followers/4981/', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/sarahmorden/followers/4981/', 'GET'));
-$I->seeResponseCodeIs(200);
-$I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 200));
-$I->seeResponseContainsJson(array('success' => true));
-$resp = $I->grabResponse();
-$I->checkUserObjs($resp, array(4981));
+$I->checkUserObjs($resp, array(2,3));
 
 $I->sendGet('/users/sarahmorden/followers/4983/', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/sarahmorden/followers/4983/', 'GET'));
-$I->seeResponseCodeIs(200);
+$I->seeResponseCodeIs(404);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('status' => 404));
 $I->seeResponseContainsJson(array('success' => false));
 
 $I->sendGet('/users/3436/followers/', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/3436/followers/', 'GET'));
@@ -51,7 +43,7 @@ $I->seeResponseContainsJson(array('success' => true));
 $I->seeResponseContainsJson(array('maps' => array()));
 
 $I->sendGet('/users/3436/followers/11234/', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/3436/followers/11234/', 'GET'));
-$I->seeResponseCodeIs(200);
+$I->seeResponseCodeIs(404);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('status' => 404));
 $I->seeResponseContainsJson(array('success' => false));

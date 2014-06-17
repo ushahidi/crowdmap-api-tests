@@ -10,7 +10,7 @@ $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 $resp = $I->grabResponse();
-$I->checkMapObjs($resp, array(4981, 4982));
+$I->checkMapObjs($resp, array(4904,4649,4462,4461,4460,4151,3658));
 
 $I->sendGet('/users/9b6f57db48ecc5ae4fab0c5c990143f7a241db380288011523b26c398137bf83773dca2f08b4344363d98e4ed6d31741bbd26eb2da296ad75263e9ba1090fca8/maps/owns/');
 $I->seeResponseCodeIs(200);
@@ -18,7 +18,7 @@ $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 $resp = $I->grabResponse();
-$I->checkMapObjs($resp, array(4981, 4982));
+$I->checkMapObjs($resp, array(4904,4649,4462,4461,4460,4151,3658));
 
 $I->sendGet('/users/sarahmorden/maps/owns/');
 $I->seeResponseCodeIs(200);
@@ -26,7 +26,7 @@ $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 $resp = $I->grabResponse();
-$I->checkMapObjs($resp, array(4981, 4982));
+$I->checkMapObjs($resp, array(4904,4649,4462,4461,4460,4151,3658));
 
 $I->sendGet('/users/sarahmorden/maps/owns/4981/');
 $I->seeResponseCodeIs(200);
