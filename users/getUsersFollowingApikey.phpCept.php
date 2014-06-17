@@ -34,8 +34,6 @@ $I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
-$resp = $I->grabResponse();
-$I->checkUserObjs($resp, array(4981));
 
 $I->sendGet('/users/sarahmorden/follows/4/', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/sarahmorden/follows/4/', 'GET'));
 $I->seeResponseCodeIs(200);
