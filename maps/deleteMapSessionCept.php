@@ -48,6 +48,14 @@ $I->seeResponseContainsJson(array('posts' => array()));
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 
+//make sure posts_maps have been deleted
+$I->sendGet('/posts/8883/', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/2/posts/', 'GET'), 'session'=> (string) $session));
+$I->seeResponseCodeIs(200);
+$I->seeResponseIsJson();
+$I->dontSeeResponseContainsJson(array('map_id' => 2));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+
 //make sure posts_maps for other maps have not been deleted
 $I->sendGet('/maps/1605/posts/', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/1605/posts/', 'GET'), 'session'=> (string) $session));
 $I->seeResponseCodeIs(200);
