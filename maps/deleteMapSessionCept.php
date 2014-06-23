@@ -44,7 +44,7 @@ $I->seeResponseContainsJson(array('success' => false));
 $I->sendGet('/maps/2/posts/', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/2/posts/', 'GET'), 'session'=> (string) $session));
 $I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('posts' => array()));
+$I->seeResponseContains('"posts":[]');
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 
@@ -67,7 +67,7 @@ $I->checkPostObjs($resp, array(8086,7972,7651));
 $I->sendGet('/maps/2/collaborators/', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/2/collaborators/', 'GET'), 'session'=> (string) $session));
 $I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('maps_collaborators' => array()));
+$I->seeResponseContains('"maps_collaborators":[]');
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 
@@ -85,7 +85,7 @@ $I->checkMapUserObjs($resp, array(2990), array(1810));
 $I->sendGet('/maps/2/settings/', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/2/settings/', 'GET'), 'session'=> (string) $session));
 $I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('maps_settings' => array()));
+$I->seeResponseContains('"maps_settings":[]');
 $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 
