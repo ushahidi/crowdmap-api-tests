@@ -131,3 +131,20 @@ $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 $resp = $I->grabResponse();
 $I->checkMapUserObjs($resp, array(2672, 2728), array(1605, 1605));
+
+//make sure owner_map_id has been set to 0 for all map owned posts
+$I->sendGet('/posts/', array('post_ids' => '279,1549', 'apikey'=> (string) $I->api_key_for_crowdmap('/posts', 'GET'), 'session'=> (string) $session));
+$I->seeResponseCodeIs(200);
+$I->seeResponseIsJson();
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContainsJson(array('owner_map_id' => 0));
+$I->dontSeeResponseContainsJson(array('owner_map_id' => 2));
+
+//make sure owner_map_id has not been changed for map owned posts for map_id != 2
+$I->sendGet('/posts/264/', array('apikey'=> (string) $I->api_key_for_crowdmap('/posts/264/', 'GET'), 'session'=> (string) $session));
+$I->seeResponseCodeIs(200);
+$I->seeResponseIsJson();
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContainsJson(array('owner_map_id' => 27));
