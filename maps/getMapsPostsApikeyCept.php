@@ -35,32 +35,32 @@ $I->seeResponseContainsJson(array('count' => 3));
 
 //test with map_id
 $I->sendGet('/maps/4968/posts/', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/4968/posts/', 'GET')));
-$I->seeResponseCodeIs(404);
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 404));
-$I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'Posts not found.'));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContains('"posts":[]');
 
 //test with map subdomain
 $I->sendGet('/maps/trekpak/posts/', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/trekpak/posts/', 'GET')));
-$I->seeResponseCodeIs(404);
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 404));
-$I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'Posts not found.'));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContains('"posts":[]');
 
 //test count with map_id
 $I->sendGet('/maps/4968/posts/', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/4968/posts/', 'GET'), 'count' => TRUE));
-$I->seeResponseCodeIs(404);
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 404));
-$I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'Posts not found.'));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContainsJson(array('count' => 0));
 
 //test count with map subdomain
 $I->sendGet('/maps/trekpak/posts/', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/trekpak/posts/', 'GET'), 'count' => TRUE));
-$I->seeResponseCodeIs(404);
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 404));
-$I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'Posts not found.'));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContainsJson(array('count' => 0));
