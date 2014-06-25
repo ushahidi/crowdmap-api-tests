@@ -946,6 +946,24 @@ class fixtures extends \Codeception\Module
 		$external['images'][0]['url'] = "http://zerohora.rbsdirect.com.br/imagesrc/15083685.jpg?w=620";
 		$external['images'][0]['selected'] = false;
 
+		$externals[16612] = array();
+
+		$external = &$externals[16612];
+		$external['external_id'] = 16612;
+		$external['service_id'] = 5;
+		$external['provider'] = "YouTube";
+		$external['type'] = "html";
+		$external['id_on_service'] = "https://www.youtube.com/watch?feature=player_embedded&v=Teaft0Kg-Ok";
+		$external['content'] = null;
+		$external['datetime'] = 1395381052;
+		$external['lat'] = null;
+		$external['lon'] = null;
+		$external['url'] = "https://www.youtube.com/watch?feature=player_embedded&v=Teaft0Kg-Ok";
+		$external['title'] = "Mac Lethal KILLS \"Look at Me Now\" (Pancake Rap)";
+		$external['favicon_url'] = "http://s.ytimg.com/yts/img/favicon-vfldLzJxy.ico";
+		$external['embed_html'] = "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=http%3A%2F%2Fwww.youtube.com%2Fembed%2FTeaft0Kg-Ok%3Ffeature%3Doembed&url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DTeaft0Kg-Ok&image=http%3A%2F%2Fi1.ytimg.com%2Fvi%2FTeaft0Kg-Ok%2Fhqdefault.jpg&key=a600d6fd88f349d39ead02dd5a203633&type=text%2Fhtml&schema=youtube\" width=\"854\" height=\"480\" scrolling=\"no\" frameborder=\"0\" allowfullscreen></iframe>";
+		$external['images'] = array();
+
 		return $externals;
 	}
 
@@ -1798,6 +1816,24 @@ class fixtures extends \Codeception\Module
 		$user['sms_confirmed'] = false;
 		$user['avatar'] = null;
 
+		$user = &$users[3];
+		$user['user_id'] = 3;
+		$user['crowdmap_id'] = "eoAKIIKZLYW6RdvTK5IbJ9QCSuJKnNb8B5I75kBHUjn7tD13k7oSJ7ifWmrxGNFsnEQCvqB1OJqbj1ovDD8bKGMVWTn5ggQ7P16ty3R6KYaNpvXhF3gF4K0ZFnwsqTxM";
+		$user['crowdmap_id_h'] = "8be2ac7a1ce39e06e7043c02e23a1438";
+		$user['username'] = "brianherbert";
+		$user['name'] = "Brian Herbert";
+		$user['bio'] = "One of the men behind the curtain.";
+		$user['plus'] = true;
+		$user['baselayer'] = "crowdmap_cucumber";
+		$user['instagram_auto_post'] = true;
+		$user['twitter_auto_post'] = false;
+		$user['twitter_auto_post_retweets'] = false;
+		$user['date_registered'] = 1370463491;
+		$user['banned'] = false;
+		$user['sms_number'] = true;
+		$user['sms_confirmed'] = true;
+		$user['avatar'] = null;
+
 		return $users;
 	}
 
@@ -2391,6 +2427,22 @@ class fixtures extends \Codeception\Module
 		$comment['user_id'] = 1;
 		$comment['comment'] = "<p>ci vediamo sabato cosi mi spieghi come fare x postare le foto. besos!</p>";
 		$comment['date_posted'] = 1373578259;
+
+		$comment = &$comments['46'];
+		$comment['comment_id'] = 46;
+		$comment['post_id'] = 77;
+		$comment['map_id'] = 0;
+		$comment['user_id'] = 2;
+		$comment['comment'] = "<p>Very cool!</p>";
+		$comment['date_posted'] = 1363841867;
+
+		$comment = &$comments['1261'];
+		$comment['comment_id'] = 1261;
+		$comment['post_id'] = 3356128;
+		$comment['map_id'] = 0;
+		$comment['user_id'] = 9132;
+		$comment['comment'] = "<p>Cool stuff.</p>";
+		$comment['date_posted'] = 1403700532;
 
 		return $comments;
 
@@ -3369,6 +3421,38 @@ class fixtures extends \Codeception\Module
 		$post['tags'][0] = array("tag"=>"dirensamsun");
 		$post['likes'] = array();
 		$post['comments'] = array();
+
+		$user = $users[3];
+		$post = &$posts[3356128];
+		$comment = &$comments[1261];
+		$post['externals'][0] = $externals[16612]
+		$post['locations'] = array();
+		$post['maps'][0] = $maps[8];
+		$post['media'][0] = array();
+		$post['post_id'] = 3356128;
+		$post['users'][0] = $user;
+		$post['owner_map_id'] = 0;
+		$post['media_id'] = 0;
+		$post['location_id'] = 0;
+		$post['external_id'] = 16612;
+		$post['externals_images_id'] = 0;
+		$post['app_id'] = 1;
+		$post['message'] = "";
+		$post['date_posted'] = 1395381062;
+		$post['public'] = true;
+		$post['forig_shortcode'] = null;
+		$post['autoposted'] = "0";
+		$post['date_updated'] = 1395381062;
+		$post['owner']['type'] = "user";
+		$post['owner']['name'] = $user['name'];
+		$post['owner']['url'] = "/user/".$user['username'];
+		$post['permissions']['edit'] = false;
+		$post['permissions']['delete'] = false;
+		$post['stub'] = "";
+		$post['tags'] = array();
+		$post['likes'][0] = array("user_id" => 3);
+		$post['comments'][0] = $comment;
+
 
 		return $posts;
 
