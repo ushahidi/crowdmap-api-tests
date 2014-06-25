@@ -31,16 +31,20 @@ class MapsHelper extends \Codeception\Module
 		if(isset($RESTusers['maps_collaborators']))
 			$RESTusers['users_list'] = $RESTusers['maps_collaborators'];
 		if(isset($RESTusers['owner']))
-			$RESTusers['users_list'] = $RESTusers['owner'];
-		
+			$RESTusers['users_list'] = array(array('users' => array($RESTusers['owner'])));
+
 		$this->assertEquals(count($RESTusers['users_list']), count($map_ids));
-		
+
 		foreach ($RESTusers['users_list'] as $index => $user)
 		{
+			if (!isset($RESTusers['owner'])) {
+				$this->assertEquals($user['user_id'], $user_ids[$index]);
+				$this->assertEquals($user['map_id'], $map_ids[$index]);
+			} else {
+				$user['users'][0]['avatar'] = null;
+			}
 			$users = json_encode($user);
 			$this->getModule('UserHelper')->checkUserObjs($users, array($user_ids[$index]));
-			$this->assertEquals($user['user_id'], $user_ids[$index]);
-			$this->assertEquals($user['map_id'], $map_ids[$index]);
 		}
 	}
 	

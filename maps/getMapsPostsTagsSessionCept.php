@@ -45,60 +45,60 @@ $I->seeResponseContainsJson(array('count' => 3));
 
 //test with bad map name
 $I->sendGet('/maps/notamap/posts/dirensamsun,OccupyGezi', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/notamap/posts/dirensamsun,OccupyGezi', 'GET'), 'session'=> (string) $session));
-$I->seeResponseCodeIs(404);
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 404));
-$I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'Map not found.'));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContains('"posts":[]');
 
 $I->sendGet('/maps/notamap/posts/dirensamsun,OccupyGezi', array('count'=>true, 'apikey'=> (string) $I->api_key_for_crowdmap('/maps/notamap/posts/dirensamsun,OccupyGezi', 'GET'), 'session'=> (string) $session));
-$I->seeResponseCodeIs(404);
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 404));
-$I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'Map not found.'));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContainsJson(array('count' => 0));
 
 //test with bad map_id
-$I->sendGet('/maps/101010101010/posts/dirensamsun,OccupyGezi', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/notamap/posts/dirensamsun,OccupyGezi', 'GET'), 'session'=> (string) $session));
-$I->seeResponseCodeIs(404);
+$I->sendGet('/maps/101010101010/posts/dirensamsun,OccupyGezi', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/101010101010/posts/dirensamsun,OccupyGezi', 'GET'), 'session'=> (string) $session));
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 404));
-$I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'Map not found.'));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContains('"posts":[]');
 
-$I->sendGet('/maps/101010101010/posts/dirensamsun,OccupyGezi', array('count'=>true, 'apikey'=> (string) $I->api_key_for_crowdmap('/maps/notamap/posts/dirensamsun,OccupyGezi', 'GET'), 'session'=> (string) $session));
-$I->seeResponseCodeIs(404);
+$I->sendGet('/maps/101010101010/posts/dirensamsun,OccupyGezi', array('count'=>true, 'apikey'=> (string) $I->api_key_for_crowdmap('/maps/101010101010/posts/dirensamsun,OccupyGezi', 'GET'), 'session'=> (string) $session));
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 404));
-$I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'Map not found.'));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContainsJson(array('count' => 0));
 
 //test tags/map combo with no matches
 $I->sendGet('/maps/1405/posts/dirensamsun,OccupyGezi', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/1405/posts/dirensamsun,OccupyGezi', 'GET'), 'session'=> (string) $session));
-$I->seeResponseCodeIs(404);
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 404));
-$I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'Posts not found.'));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContains('"posts":[]');
 
 $I->sendGet('/maps/1405/posts/dirensamsun,OccupyGezi', array('count'=>true, 'apikey'=> (string) $I->api_key_for_crowdmap('/maps/1405/posts/dirensamsun,OccupyGezi', 'GET'), 'session'=> (string) $session));
-$I->seeResponseCodeIs(404);
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 404));
-$I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'Posts not found.'));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContainsJson(array('count' => 0));
 
 //test map with no posts
-$I->sendGet('/maps/3/posts/dirensamsun,OccupyGezi', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/1405/posts/dirensamsun,OccupyGezi', 'GET'), 'session'=> (string) $session));
-$I->seeResponseCodeIs(404);
+$I->sendGet('/maps/3/posts/dirensamsun,OccupyGezi', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/3/posts/dirensamsun,OccupyGezi', 'GET'), 'session'=> (string) $session));
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 404));
-$I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'Posts not found.'));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContains('"posts":[]');
 
-$I->sendGet('/maps/3/posts/dirensamsun,OccupyGezi', array('count'=>true, 'apikey'=> (string) $I->api_key_for_crowdmap('/maps/1405/posts/dirensamsun,OccupyGezi', 'GET'), 'session'=> (string) $session));
-$I->seeResponseCodeIs(404);
+$I->sendGet('/maps/3/posts/dirensamsun,OccupyGezi', array('count'=>true, 'apikey'=> (string) $I->api_key_for_crowdmap('/maps/3/posts/dirensamsun,OccupyGezi', 'GET'), 'session'=> (string) $session));
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 404));
-$I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'Posts not found.'));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContainsJson(array('count' => 0));
