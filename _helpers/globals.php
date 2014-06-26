@@ -26,3 +26,9 @@ Posts
 */
 
 define('DEFAULT_POST_LIMIT',20);
+
+/*
+Set _media directory
+*/
+
+define('MEDIA_DIR', dirname(__DIR__).'/_media/');

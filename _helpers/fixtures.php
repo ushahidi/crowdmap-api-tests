@@ -1388,6 +1388,7 @@ class fixtures extends \Codeception\Module
 		$user['banned'] = false;
 		$user['sms_number'] = false;
 		$user['sms_confirmed'] = false;
+		$user['avatar'] = null;
 		
 		$user = &$users[6657];
 		$user['user_id'] = 6657;

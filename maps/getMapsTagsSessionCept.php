@@ -45,18 +45,18 @@ $I->seeResponseContainsJson(array('count' => "5"));
 
 //test tags that don't exist
 $I->sendGet('/maps/tags/notatag', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/tags/notatag', 'GET'), 'session'=> (string) $session));
-$I->seeResponseCodeIs(404);
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 404));
-$I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => "Tags not found."));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContains('"maps_tags":[]');
 
 $I->sendGet('/maps/tags/notatag', array('count'=>true, 'apikey'=> (string) $I->api_key_for_crowdmap('/maps/tags/notatag', 'GET'), 'session'=> (string) $session));
-$I->seeResponseCodeIs(404);
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 404));
-$I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => "Tags not found."));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContainsJson(array('count' => "0"));
 
 //tests for /maps/:map_id/tags(/:tag)
 
@@ -160,29 +160,29 @@ $I->seeResponseContainsJson(array('error' => "Map not found."));
 //tests for tag that doesn't exist
 
 $I->sendGet('/maps/northkoreasocial/tags/notatag', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/northkoreasocial/tags/notatag', 'GET'), 'session'=> (string) $session));
-$I->seeResponseCodeIs(404);
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 404));
-$I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => "Tags not found."));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContains('"maps_tags":[]');
 
 $I->sendGet('/maps/northkoreasocial/tags/notatag', array('count'=>true, 'apikey'=> (string) $I->api_key_for_crowdmap('/maps/northkoreasocial/tags/notatag', 'GET'), 'session'=> (string) $session));
-$I->seeResponseCodeIs(404);
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 404));
-$I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => "Tags not found."));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContainsJson(array('count' => "0"));
 
 $I->sendGet('/maps/1/tags/notatag', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/1/tags/notatag', 'GET'), 'session'=> (string) $session));
-$I->seeResponseCodeIs(404);
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 404));
-$I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => "Tags not found."));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContains('"maps_tags":[]');
 
 $I->sendGet('/maps/1/tags/notatag', array('count'=>true, 'apikey'=> (string) $I->api_key_for_crowdmap('/maps/1010101010/tags/notatag', 'GET'), 'session'=> (string) $session));
-$I->seeResponseCodeIs(404);
+$I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContainsJson(array('status' => 404));
-$I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => "Tags not found."));
+$I->seeResponseContainsJson(array('status' => 200));
+$I->seeResponseContainsJson(array('success' => true));
+$I->seeResponseContainsJson(array('count' => "0"));
