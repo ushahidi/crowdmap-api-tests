@@ -10,18 +10,16 @@ $I->seeResponseIsJson();
 $session = $I->getSession();
 
 /* testing request with user_id */
-$I->sendGet('/users/7968/avatar', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/7968/avatar', 'GET'), 'session'=> (string) $session));
+$I->sendGet('/users/6657/avatar', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/6657/avatar', 'GET'), 'session'=> (string) $session));
 $I->seeResponseCodeIs(200);
 
 /* testing request with crowdmapID */
-$I->sendGet('/users/53c6c39cf7e29248e0503f7483d4269277e4bf3c2c1e6bfbff1478d441b00212de5267fb17643461d9b99bc7ff4ef044ad64c1dd4b219aaa6884a0022a8d167c/avatar', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/53c6c39cf7e29248e0503f7483d4269277e4bf3c2c1e6bfbff1478d441b00212de5267fb17643461d9b99bc7ff4ef044ad64c1dd4b219aaa6884a0022a8d167c/avatar', 'GET'), 'session'=> (string) $session));
+$I->sendGet('/users/6d017506671d5e5d6bbd14c2ce0159713f106c5b75208ad4d2540683026801afd2f0c79ee339f2584bcd7306f0bb6a8cd681aa9f1ad7d4be3c6c881f32efc0af/avatar', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/6d017506671d5e5d6bbd14c2ce0159713f106c5b75208ad4d2540683026801afd2f0c79ee339f2584bcd7306f0bb6a8cd681aa9f1ad7d4be3c6c881f32efc0af/avatar', 'GET'), 'session'=> (string) $session));
 $I->seeResponseCodeIs(200);
-
 
 /* testing request with username */
-$I->sendGet('/users/dmastermind/avatar', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/dmastermind/avatar', 'GET'), 'session'=> (string) $session));
+$I->sendGet('/users/zackhalloran/avatar', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/zackhalloran/avatar', 'GET'), 'session'=> (string) $session));
 $I->seeResponseCodeIs(200);
-
 
 /* testing request with bad username */
 $I->sendGet('/users/returnofthejedi/avatar', array('apikey'=> (string) $I->api_key_for_crowdmap('/users/returnofthejedi/avatar', 'GET'), 'session'=> (string) $session));
