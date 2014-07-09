@@ -21,16 +21,9 @@ class AccessHelper extends \Codeception\Module
 		$I->seeResponseIsJson();
 		$I->seeResponseContainsJson(array('post_id'=>811));
 		$I->seeResponseContainsJson(array('post_id'=>825));
-		if (!$authorized) {
-			$I->dontSeeResponseContains('"sms_submitted_by":');
-			$I->dontSeeResponseContainsJson(array('sms_submitted_by'=>'4444444444'));
-			$I->dontSeeResponseContainsJson(array('sms_submitted_by'=>'1234567891'));
-		}
-		else {
-			$I->seeResponseContains('"sms_submitted_by":');
-			$I->seeResponseContainsJson(array('sms_submitted_by'=>'4444444444'));
-			$I->seeResponseContainsJson(array('sms_submitted_by'=>'1234567891'));
-		}
+		$I->dontSeeResponseContains('"sms_submitted_by":');
+		$I->dontSeeResponseContainsJson(array('sms_submitted_by'=>'4444444444'));
+		$I->dontSeeResponseContainsJson(array('sms_submitted_by'=>'1234567891'));
 		
 		/*
 		
@@ -63,14 +56,8 @@ class AccessHelper extends \Codeception\Module
 		$I->seeResponseCodeIs(200);
 		$I->seeResponseIsJson();
 		$I->seeResponseContainsJson(array('post_id'=>811));
-		if (!$authorized) {
-			$I->dontSeeResponseContains('"sms_submitted_by":');
-			$I->dontSeeResponseContainsJson(array('sms_submitted_by'=>'4444444444'));
-		}
-		else {
-			$I->seeResponseContains('"sms_submitted_by":');
-			$I->seeResponseContainsJson(array('sms_submitted_by'=>'4444444444'));						
-		}
+		$I->dontSeeResponseContains('"sms_submitted_by":');
+		$I->dontSeeResponseContainsJson(array('sms_submitted_by'=>'4444444444'));
 		
 		/*
 		
@@ -82,14 +69,9 @@ class AccessHelper extends \Codeception\Module
 		$I->seeResponseCodeIs(200);
 		$I->seeResponseIsJson();
 		$I->seeResponseContainsJson(array('post_id'=>825));
-		if (!$authorized) {
-			$I->dontSeeResponseContains('"sms_submitted_by":');
-			$I->dontSeeResponseContainsJson(array('sms_submitted_by'=>'1234567891'));
-		}
-		else {
-			$I->seeResponseContains('"sms_submitted_by":');
-			$I->seeResponseContainsJson(array('sms_submitted_by'=>'1234567891'));
-		}		
+		$I->dontSeeResponseContains('"sms_submitted_by":');
+		$I->dontSeeResponseContainsJson(array('sms_submitted_by'=>'1234567891'));
+		
 		/*
 		
 		request posts associated with map 391, specifying post_id 811 and the sms_number field
