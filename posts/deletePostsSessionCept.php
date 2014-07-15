@@ -10,11 +10,18 @@ $I->seeResponseIsJson();
 $session = $I->getSession();
 
 // test DELETE request on existing Post
-$I->sendDelete('/posts/11626', array('apikey'=> (string) $I->api_key_for_crowdmap('/posts/', 'DELETE')), 'session' => $session);
+$I->sendDelete('/posts/11626', array('apikey'=> (string) $I->api_key_for_crowdmap('/posts/11626', 'DELETE')), 'session' => $session);
 $I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('success'=>true));
 $I->seeResponseContainsJson(array('status'=>200));
+
+// Check that post was deleted
+$I->sendGet('/posts/11626', array('apikey'=> (string) $I->api_key_for_crowdmap('/posts/11626', 'DELETE')), 'session' => $session);
+$I->seeResponseCodeIs(401);
+$I->seeResponseIsJson();
+$I->seeResponseContainsJson(array('success' => false));
+$I->seeResponseContainsJson(array('status' => 401));
 
 // Check that post was deleted
 $I->sendGet('/posts/', array('apikey'=> (string) $I->api_key_for_crowdmap('/posts/', 'GET')));
