@@ -1,6 +1,6 @@
 <?php
 $I = new PostGuy($scenario);
-$I->wantTo('test get request against the /posts/(:post_id)/comments(/:map_id)/ end-point with Session');
+$I->wantTo('test DELETE request against the /posts/(:post_id)/comments(/:map_id)/ end-point with Session');
 $I->haveHttpHeader('Content-Type', 'text/html');
 $I->haveHttpHeader('User-Agent', 'Api Test/0.1');
 
