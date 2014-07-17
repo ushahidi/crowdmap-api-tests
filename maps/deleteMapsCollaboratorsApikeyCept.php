@@ -1,6 +1,6 @@
 <?php
 $I = new MapsGuy($scenario);
-$I->wantTo('test get request against the /maps/:map_id/collaborators end-point with apikey');
+$I->wantTo('test DELETE request against the /maps/:map_id/collaborators end-point with apikey');
 $I->haveHttpHeader('Content-Type', 'text/html');
 $I->haveHttpHeader('User-Agent', 'Api Test/0.1');
 
