@@ -10,7 +10,7 @@ $I->seeResponseCodeIs(401);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 401));
 $I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'This action requires a valid session.'));
+$I->seeResponseContainsJson(array('error' => 'This action requires an API token or a valid session.'));
 
 //test request to stop following random user
 $I->sendDelete('/users/4/followers/');
@@ -18,7 +18,7 @@ $I->seeResponseCodeIs(401);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 401));
 $I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'This action requires a valid session.'));
+$I->seeResponseContainsJson(array('error' => 'This action requires an API token or a valid session.'));
 
 // test users followed by user
 $I->sendGet('/users/zackhalloran/follows/');

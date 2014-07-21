@@ -10,7 +10,7 @@ $I->seeResponseCodeIs(401);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 401));
 $I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'This action requires a valid session.'));
+$I->seeResponseContainsJson(array('error' => 'This action requires an API token or a valid session.'));
 
 /* testing posts/:post_id/tags with tag cmupdates is deleted */
 $I->sendGet('/posts/77/tags/cmupdates');
@@ -26,7 +26,7 @@ $I->seeResponseCodeIs(401);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 401));
 $I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'This action requires a valid session.'));
+$I->seeResponseContainsJson(array('error' => 'This action requires an API token or a valid session.'));
 
 /* testing posts/:post_id/tags with non-existing tag */
 $I->sendGet('/posts/111111111/tags/kachumbari');

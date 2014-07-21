@@ -10,7 +10,7 @@ $I->seeResponseCodeIs(401);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 401));
 $I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'This action requires a valid session.'));
+$I->seeResponseContainsJson(array('error' => 'This action requires an API token or a valid session.'));
 
 // Ensure post isn't deleted
 $I->sendGet('/posts/11608');

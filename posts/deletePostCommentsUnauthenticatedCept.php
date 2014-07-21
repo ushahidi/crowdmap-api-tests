@@ -10,7 +10,7 @@ $I->seeResponseCodeIs(401);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 401));
 $I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'This action requires a valid session.'));
+$I->seeResponseContainsJson(array('error' => 'This action requires an API token or a valid session.'));
 
 /* testing delete posts/:post_id/comments with non-existing comment and non-existing map */
 $I->sendDelete('/posts/111111111/comments/10101');
@@ -18,7 +18,7 @@ $I->seeResponseCodeIs(401);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 401));
 $I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'This action requires a valid session.'));
+$I->seeResponseContainsJson(array('error' => 'This action requires an API token or a valid session.'));
 
 /* testing posts/:post_id/comments with non-existing map still exists */
 $I->sendGet('/posts/3356128/comments/46');

@@ -10,7 +10,7 @@ $I->seeResponseCodeIs(401);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 401));
 $I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'This action requires a valid session.'));
+$I->seeResponseContainsJson(array('error' => 'This action requires an API token or a valid session.'));
 
 //test request to mark notifications as read
 $I->sendDelete('/users/4/notifications');
@@ -18,7 +18,7 @@ $I->seeResponseCodeIs(401);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 401));
 $I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'This action requires a valid session.'));
+$I->seeResponseContainsJson(array('error' => 'This action requires an API token or a valid session.'));
 
 //test request to mark notification as read
 $I->sendDelete('/users/6657/notifications/2312');
@@ -26,7 +26,7 @@ $I->seeResponseCodeIs(401);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 401));
 $I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'This action requires a valid session.'));
+$I->seeResponseContainsJson(array('error' => 'This action requires an API token or a valid session.'));
 
 //test request to mark notification as read
 $I->sendDelete('/users/4/notifications/2312');
@@ -34,5 +34,5 @@ $I->seeResponseCodeIs(401);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 401));
 $I->seeResponseContainsJson(array('success' => false));
-$I->seeResponseContainsJson(array('error' => 'This action requires a valid session.'));
+$I->seeResponseContainsJson(array('error' => 'This action requires an API token or a valid session.'));
 
