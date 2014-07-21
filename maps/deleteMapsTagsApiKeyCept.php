@@ -117,7 +117,7 @@ $I->seeResponseContainsJson(array('status' => 200));
 $I->seeResponseContainsJson(array('success' => true));
 $I->seeResponseContains('"maps_tags":[]');
 
-$I->sendGet('/maps/1/tags/notatag', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/1/tags/notatag', 'GET')));
+$I->sendDelete('/maps/1/tags/notatag', array('apikey'=> (string) $I->api_key_for_crowdmap('/maps/1/tags/notatag', 'GET')));
 $I->seeResponseCodeIs(401);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 401));
