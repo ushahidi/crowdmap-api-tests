@@ -5,7 +5,7 @@ $I->haveHttpHeader('Content-Type', 'text/html');
 $I->haveHttpHeader('User-Agent', 'Api Test/0.1');
 
 //test request to delete post like
-$I->sendDelete('/posts/11626/like', array('apikey'=> (string) $I->api_key_for_crowdmap('/posts/', 'DELETE')));
+$I->sendDelete('/posts/11626/like', array('apikey'=> (string) $I->api_key_for_crowdmap('/posts/11626/like', 'DELETE')));
 $I->seeResponseCodeIs(401);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 401));
