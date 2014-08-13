@@ -6,7 +6,7 @@ $I->haveHttpHeader('User-Agent', 'Api Test/0.1');
 
 /* testing adding tag to posts/:post_id/tags with tag addnewtag */
 $I->sendPost('/posts/77/tags/', array('apikey'=> (string) $I->api_key_for_crowdmap('/posts/77/tags/', 'POST'),
-  'post_tags' => 'addnewtag'));
+  'tag' => 'addnewtag'));
 $I->seeResponseCodeIs(401);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 401));
@@ -23,7 +23,7 @@ $I->seeResponseContainsJson(array('post_tags' => array()));
 
 /* testing creating tag posts/:post_id/tags with non-existing post */
 $I->sendPost('/posts/111111111/tags/', array('apikey'=> (string) $I->api_key_for_crowdmap('/posts/111111111/tags/', 'POST'),
-  'post_tags' => 'addnewtag'));
+  'tag' => 'addnewtag'));
 $I->seeResponseCodeIs(401);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson(array('status' => 401));
